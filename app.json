@@ -1,0 +1,8 @@
+{
+  "name":"pernixProtein",
+  "scripts":{},
+  "env":{
+    "NODE_ENV":"production"
+  },
+  "addons":[]
+}
