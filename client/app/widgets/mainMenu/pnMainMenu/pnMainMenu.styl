@@ -1,0 +1,107 @@
+.menu {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  display: table;
+  margin-top: 1px;
+  padding: 14px 10px;
+  width: 100%;
+  background: #222;
+  text-decoration: none;
+  text-align: left;
+  vertical-align: middle;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: background;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+
+.menu > li:first-child a {
+  background-color: #fff;
+  margin-top: 0;
+  color: #000;
+  border: solid 1px;
+  margin-bottom: -1px;
+}
+
+.menu > li:last-child a {
+  background-color: white;
+  margin-top: 0;
+  color: black;
+  border: solid 1px;
+}
+
+.menu li ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li li a {
+  display: block;
+  margin-top: -1px;
+  border-bottom solid 1px
+  border-left solid 1px
+  border-right solid 1px
+  padding: 0 10px;
+  height: 0;
+  background: #9E9E9E; //submenu2
+  color: #222;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.menu li li:last-child a {
+  border-bottom solid 0px
+}
+
+
+
+.menu > li:hover li a {
+  display: table;
+  margin-top: 1px;
+  padding: 10px;
+  width: 100%;
+  height: 1em;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.subMenu a:hover {
+  background: white; // CUSTOM
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+//Animations top main
+
+/* when hiding the picture */
+.ng-hide-add {
+  animation: 0.5s fadeOut ease;
+}
+
+/* when showing the picture */
+.ng-hide-remove {
+  animation: 0.5s fadeIn ease;
+}
