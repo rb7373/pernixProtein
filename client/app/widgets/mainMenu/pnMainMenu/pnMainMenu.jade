@@ -4,18 +4,37 @@
       nav#menu_box
       ul.menu(ng-mouseleave="hideOptions()")
         li
-          a.topMenuOption(href="#", ng-mouseenter="showOptions()") {{navigation.getCurrentStateName()}}
-        li.subMenu(ng-show="showMenu", ng-repeat="section in [1, 2, 3, 4, 5]")
-          a(href="#") Menu 2
+          a.topMenuOption(href="#", ng-mouseenter="showOptions()")
+            span
+              ng-md-icon(icon="add", size="28", ng-show="!showMenu")
+              ng-md-icon(icon="remove", size="28", ng-show="showMenu")
+            span.titleMenu
+              | {{navigation.getCurrentStateName()}}
+        li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections")
+          a(href="#")
+            span.subTitleMenu
+              | {{section.name}}
           ul
             li
-              a(href="#") Menu 2.1
+              a(href="#")
+                span.subTitleItemMenu
+                  | Objectives
             li
-              a(href="#") Menu 2.2
+              a(href="#")
+                span.subTitleItemMenu
+                  | Animation
             li
-              a(href="#") Menu 2.3
+              a(href="#")
+                span.subTitleItemMenu
+                  | Practice Session
         li
-          a.topMenuOption(ng-show="showMenu") {{navigation.getCurrentStateName()}}
+          a.topMenuOption.fadeMenu(ng-show="showMenu")
+            div
+              span.footerSubTitleMenu
+                | Voet, Voet & Pratt
+            div
+              span.footerTitleMenu
+                | Fundamentals of Biochemistry
 //a#dropdownMenu1.btn.btn-default.pn-btn-main-menu(type='button', aria-expanded='true', ng-click="toggleMenu()", ng-show="!showMenu")
 //  span.glyphicon.glyphicon-plus(aria-hidden='true', ng-show="!showMenu")
 //  span.glyphicon.glyphicon-minus(aria-hidden='true', ng-show="showMenu")

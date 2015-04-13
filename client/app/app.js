@@ -6,7 +6,8 @@ angular.module('proteinApp', [
     'ngSanitize',
     'ui.router',
     'ui.bootstrap',
-    'ngAnimate'
+    'ngAnimate',
+    'ngMdIcons'
 ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider

@@ -2,13 +2,13 @@
   .navbar.navbar-inverse.navbar-fixed-bottom
     .container-fluid.text-center
       .row
-        a.btn.navbar-btn.pull-left.pn-footer-button
+        a.btn.navbar-btn.pull-left.pn-footer-button(ng-show='!!navigation.getPreviosSection()')
           span.glyphicon.glyphicon-triangle-left(aria-hidden='true')
-          | &nbsp;123456789
+          | {{!!navigation.getPreviosSection()}}
 
         a.btn.navbar-btn.pull-right.pn-footer-button
           |  123456789&nbsp;
           span.glyphicon.glyphicon-triangle-right(aria-hidden='true')
 
         a.btn.navbar-btn.pn-footer-button
-          |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{navigation.getCurrentStateName()}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{navigation.getCurrentSectionTitle()}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

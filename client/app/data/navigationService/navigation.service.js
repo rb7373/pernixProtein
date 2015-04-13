@@ -120,21 +120,37 @@
       },]
     }];
 
-    var currentState = data[0];
-    var currentSection = currentState.sections[0];
+    var initSectionTitle = 'Introdution';
+    var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
+    var currentStateIndex = 0;
+    var currentSectionIndex = 0;
+    var currentSectionIndexTag = 0;
+    var currentSectionTitle = initSectionTitle;
+    var currentState = data[currentStateIndex];
+    var currentSection = currentState.sections[currentSectionIndex];
 
 
     var service = {
       loadAll: loadAll,
       getCurrentStateName: getCurrentStateName,
       getCurrentSectionName: getCurrentSectionName,
-      getSections: getSections
+      getSections: getSections,
+      getCurrentSection: getCurrentSection,
+      getCurrentSectionTitle: getCurrentSectionTitle,
+      getNextSectionTitle: getNextSectionTitle,
+      getNextSection: getNextSection,
+      getPreviosSection: getPreviosSection,
+      updateCurrentSection: updateCurrentSection
     };
 
     return service;
 
 
     ////////////////
+
+    function getCurrentSectionIndex(){
+      return currentSectionIndex;
+    }
 
     function loadAll(){
       return $q.when(data);
@@ -150,6 +166,38 @@
 
     function getSections(){
       return currentState.sections;
+    }
+
+    function getCurrentSection(){
+      return currentState.sections[currentSectionIndex];
+    }
+
+    function getCurrentSectionTitle(){
+      var previosSection = getPreviosSection();
+      var currentTitle = previosSection != null ? getCurrentSection().name : initSectionTitle;
+      return currentTitle;
+    }
+
+    function getNextSectionTitle(){
+      var previosSection = getPreviosSection();
+      var currentTitle = previosSection != null ? getCurrentSection().name : initSectionTitle;
+      return currentTitle;
+    }
+
+    function getNextSection(){
+      var nextSection = currentSectionIndex == (currentState.sections.length -1) == currentSectionIndex ?
+        null : currentState.sections[currentSectionIndex + 1];
+      return nextSection;
+    }
+
+    function getPreviosSection(){
+      var previosSection = currentSectionIndex == 0 ?
+        null : currentState.sections[currentSectionIndex - 1];
+      return previosSection;
+    }
+
+    function updateCurrentSection(){
+
     }
 
   }
