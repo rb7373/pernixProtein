@@ -2,13 +2,14 @@
   .navbar.navbar-inverse.navbar-fixed-bottom
     .container-fluid.text-center
       .row
-        a.btn.navbar-btn.pull-left.pn-footer-button(ng-show='!!navigation.getPreviosSection()')
+        a.btn.navbar-btn.pull-left.pn-footer-button(ng-show='!!navigation.getNavigationState().previousTitle',
+        ng-click = '')
           span.glyphicon.glyphicon-triangle-left(aria-hidden='true')
-          | {{!!navigation.getPreviosSection()}}
+          | {{!!navigation.getNavigationState().previousTitle}}
 
         a.btn.navbar-btn.pull-right.pn-footer-button
-          |  123456789&nbsp;
+          |  {{navigation.getNavigationState().nextTitle}}&nbsp;
           span.glyphicon.glyphicon-triangle-right(aria-hidden='true')
 
-        a.btn.navbar-btn.pn-footer-button
-          |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{navigation.getCurrentSectionTitle()}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        a.btn.navbar-btn.pn-footer-button(ng-show='!!navigation.getNavigationState().nextTitle', ng-click='navigation.goNext()')
+          |  &nbsp;&nbsp;{{navigation.getNavigationState().currentTitle}}&nbsp;&nbsp;

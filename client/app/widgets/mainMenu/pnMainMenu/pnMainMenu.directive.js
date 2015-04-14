@@ -23,23 +23,32 @@
     function link(scope, element, attrs) {
 
       scope.showMenu = false;
+      scope.mouseEnter = false;
 
       scope.navigation = navigationService;
 
       scope.sections = scope.navigation.getSections();
 
+      function mouseDown(){
+        console.log('mouse down');
 
-      scope.showOptions = function(){
-        scope.showMenu=true;
+      }
+
+      function showOptions(){
+        scope.showMenu = true;
+        scope.mouseEnter = true;
         console.log("Enter");
       };
 
-      scope.hideOptions = function(){
-        scope.showMenu=false;
+      function hideOptions(){
+        scope.showMenu = false;
+        scope.mouseEnter = false;
         console.log("Leave");
       };
 
-
+      scope.mouseDown = mouseDown;
+      scope.showOptions = showOptions;
+      scope.hideOptions = hideOptions;
 
     }
   }
