@@ -121,15 +121,26 @@
     }];
 
     var service = {
-      loadAll: loadAll
+      loadAll: loadAll,
+      getSections: getSections,
+      getCurrentStateTitle: getCurrentStateTitle
     };
+
+    var initSectionTitle = 'Introdution';
+    var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
+    var initStateIndex = 0;
+    var initIndexSection = 0;
+    var initIndexSubSection = 0;
+
+    var currentState = data[initStateIndex];
+
+    var currentSetionTitle = initSectionTitle;
 
     return service;
 
-    var currentSectionIndex
-
-
     ////////////////
+
+
 
     function loadAll() {
       return $q.when(data);
@@ -142,6 +153,14 @@
 
     function getPreviosSubSectionIndex(){
       var previosSubSectionIndex = currentSubSectionIndex == 0 ? 0 : currentSubSectionIndex--;
+    }
+
+    function getSections() {
+      return currentState.sections;
+    }
+
+    function getCurrentStateTitle(){
+      return currentState.name;
     }
 
   }

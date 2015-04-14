@@ -1,13 +1,13 @@
 .container-fluid(style="position: fixed)")
   .row
-      ul.menu.col-xs-10.col-sm-6.col-md-4.col-lg-4(ng-mouseleave="hideOptions()")
+      ul.menu.col-xs-10.col-sm-6.col-md-4.col-lg-4()
         li
-          a.topMenuOption(href="#", ng-mousedown="mouseDown()", ng-mouseover="showOptions()")
+          a.topMenuOption(href="#", ng-click="toogleOptionsMenu()")
             span
-              ng-md-icon(icon="add", size="28", ng-show="!showMenu")
-              ng-md-icon(icon="remove", size="28", ng-show="showMenu")
+              ng-md-icon(icon="add", size="26", ng-show="!showMenu")
+              ng-md-icon(icon="remove", size="26", ng-show="showMenu")
             span.titleMenu
-              | {{navigation.getCurrentStateName()}}
+              | {{navigation.getCurrentStateTitle()}}
         li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections")
           a(href="#")
             span.subTitleMenu

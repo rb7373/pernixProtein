@@ -3,7 +3,7 @@
 //variables
 $mainColorMenuDark = #222
 $mainColorMenuLight = white
-$subMenuHover = #9E9E9E
+$subMenuHover = #EBEBEB
 $subMenuMenuLight = white
 
 
@@ -108,13 +108,8 @@ $subMenuMenuLight = white
   transition-timing-function: ease-out;
 }
 
-.menu li li:last-child a {
-  border-bottom solid 0px
-}
 
-
-
-.menu > li:hover li a {
+/*.menu > li:hover li a {
   display: table;
   margin-top: 1px;
   padding: 10px;
@@ -126,10 +121,19 @@ $subMenuMenuLight = white
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+}*/
+
+.menu li li:last-child a {
+  border-bottom solid 0px
 }
+
+
+
+
 
 .subMenu a:hover {
   background: $subMenuHover;
+  color: $mainColorMenuDark
   -webkit-transition-property: background;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -149,3 +153,11 @@ $subMenuMenuLight = white
 .fadeMenu.ng-hide-remove {
   animation: 0.5s fadeIn ease;
 }
+
+
+
+#hacky-input {
+  display: none;
+}
+
+

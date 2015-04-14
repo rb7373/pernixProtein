@@ -23,11 +23,14 @@
     function link(scope, element, attrs) {
 
       scope.showMenu = false;
-      scope.mouseEnter = false;
 
       scope.navigation = navigationService;
 
       scope.sections = scope.navigation.getSections();
+
+      function toogleOptionsMenu(){
+        scope.showMenu = !scope.showMenu;
+      }
 
       function mouseDown(){
         console.log('mouse down');
@@ -36,19 +39,15 @@
 
       function showOptions(){
         scope.showMenu = true;
-        scope.mouseEnter = true;
-        console.log("Enter");
       };
 
       function hideOptions(){
         scope.showMenu = false;
-        scope.mouseEnter = false;
-        console.log("Leave");
       };
 
-      scope.mouseDown = mouseDown;
       scope.showOptions = showOptions;
       scope.hideOptions = hideOptions;
+      scope.toogleOptionsMenu = toogleOptionsMenu;
 
     }
   }
