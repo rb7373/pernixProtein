@@ -11,5 +11,5 @@
           |  {{navigation.getNavigationState().nextTitle}}&nbsp;
           span.glyphicon.glyphicon-triangle-right(aria-hidden='true')
 
-        a.btn.navbar-btn.pn-footer-button(ng-show='!!navigation.getNavigationState().nextTitle', ng-click='navigation.goNext()')
-          |  &nbsp;&nbsp;{{navigation.getNavigationState().currentTitle}}&nbsp;&nbsp;
+        a.btn.navbar-btn.pn-footer-button()
+          |  &nbsp;&nbsp;{{navigation.getCurrentTitle()}}&nbsp;&nbsp;

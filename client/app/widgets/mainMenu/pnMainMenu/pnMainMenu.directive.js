@@ -78,6 +78,11 @@
         return scope.currentSubSection === index;
       }
 
+      function selectOption(sectionIndex, subSectionIndex){
+        console.log('Section: ' + sectionIndex + ' subSection: ' + subSectionIndex);
+        scope.navigation.setCurrentSectionState(sectionIndex, subSectionIndex);
+      }
+
       scope.showOptions = showOptions;
       scope.hideOptions = hideOptions;
       scope.toogleOptionsMenu = toogleOptionsMenu;
@@ -85,9 +90,11 @@
       scope.currentSubSection = -1;
       scope.updateCurrentSubSection = updateCurrentSubSection;
       scope.isSelectedSubSection = isSelectedSubSection;
-      scope.widthMenu = scope.navigation.getMaxLen()*10+30;
-      scope.closeOnLeaveMouse = closeOnLeaveMouse;
 
+      scope.widthMenu = 'inherit';
+      //scope.widthMenu = scope.navigation.getMaxLen()*10+30 + 'px';
+      scope.closeOnLeaveMouse = closeOnLeaveMouse;
+      scope.selectOption = selectOption;
 
     }
   }

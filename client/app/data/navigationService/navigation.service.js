@@ -125,14 +125,14 @@
       getSections: getSections,
       getCurrentStateTitle: getCurrentStateTitle,
       getSectionStructure: getSectionStructure,
-      getMaxLen: getMaxLen
+      getMaxLen: getMaxLen,
+      setCurrentSectionState:setCurrentSectionState,
+      getCurrentTitle: getCurrentTitle
     };
 
     var initSectionTitle = 'Introdution';
     var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
     var initStateIndex = 0;
-    var initIndexSection = 0;
-    var initIndexSubSection = 0;
 
     var maxLen = undefined;
 
@@ -140,21 +140,46 @@
 
     var currentSetionTitle = initSectionTitle;
 
+    var currentSectionState = {
+      section: -1,
+      subSection: -1
+    }
+
+    var nextSectionState = {
+      section: -1,
+      subSection: -1
+    }
+
+    var previosSectionState = {
+      section: -1,
+      subSection: -1
+    }
+
     return service;
 
     ////////////////
 
+    function getCurrentTitle(){
+      var sectionIndex = currentSectionState.section;
+      var currentTitle;
+      currentTitle = sectionIndex == -1 ? initSectionTitle : getSections[sectionIndex].name;
+      return currentTitle;
+    }
+
+    function setCurrentSectionState(sectionIndex, subSectionIndex){
+      currentSectionState.section = sectionIndex;
+      currentSectionState.subSection = subSectionIndex;
+    }
+
+    function getMaxLenSectionTitle(elemt){
+      var len = elemt.name.length;
+      maxLen = maxLen < len ? len : maxLen;
+    }
 
     function getMaxLen(){
       var sections = getSections();
       maxLen = -1;
-      sections.forEach(
-        function(elemt){
-          var len = elemt.name.length;
-          maxLen = maxLen < len ? len : maxLen;
-        }
-      );
-      console.log(maxLen);
+      sections.forEach(getMaxLenSectionTitle);
       return maxLen;
     }
 
@@ -164,12 +189,13 @@
     }
 
     function getNextSubSectionIndex(){
-      var nextSubSectionIndex = currentSubSectionIndex == 2 ? 0 : currentSubSectionIndex++;
+      var nextSubSectionIndex = currentSectionState.subSection == 2 ? 0 : currentSectionState.subSection++;
       return nextSubSectionIndex;
     }
 
     function getPreviosSubSectionIndex(){
-      var previosSubSectionIndex = currentSubSectionIndex == 0 ? 0 : currentSubSectionIndex--;
+      var previosSubSectionIndex = currentSectionState.subSection == 0 ? 0 : currentSectionState.subSection--;
+      return previosSubSectionIndex;
     }
 
     function getSections() {
