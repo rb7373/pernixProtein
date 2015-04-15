@@ -4,6 +4,7 @@
 $mainColorMenuDark = #222
 $mainColorMenuLight = white
 $subMenuHover = #EBEBEB
+$subMenuBorder = #DEDEDE
 $subMenuMenuLight = white
 
 
@@ -12,6 +13,12 @@ $subMenuMenuLight = white
   padding: 0;
   position absolute
   z-index 100
+}
+
+.menuShadow{
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .titleMenu{
@@ -109,7 +116,7 @@ $subMenuMenuLight = white
 }
 
 
-/*.menu > li:hover li a {
+.menu > li.active li a {
   display: table;
   margin-top: 1px;
   padding: 10px;
@@ -121,14 +128,15 @@ $subMenuMenuLight = white
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-}*/
+  border-bottom solid 1px
+  border-left solid 1px
+  border-right solid 1px
+  border-color $subMenuBorder
+}
 
 .menu li li:last-child a {
   border-bottom solid 0px
 }
-
-
-
 
 
 .subMenu a:hover {
@@ -154,10 +162,5 @@ $subMenuMenuLight = white
   animation: 0.5s fadeIn ease;
 }
 
-
-
-#hacky-input {
-  display: none;
-}
 
 

@@ -17,3 +17,5 @@ Add Procfile file with:
 
 web: node server/app.js
 
+NODE_ENV = production
+

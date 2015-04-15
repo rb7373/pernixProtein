@@ -123,7 +123,9 @@
     var service = {
       loadAll: loadAll,
       getSections: getSections,
-      getCurrentStateTitle: getCurrentStateTitle
+      getCurrentStateTitle: getCurrentStateTitle,
+      getSectionStructure: getSectionStructure,
+      getMaxLen: getMaxLen
     };
 
     var initSectionTitle = 'Introdution';
@@ -131,6 +133,8 @@
     var initStateIndex = 0;
     var initIndexSection = 0;
     var initIndexSubSection = 0;
+
+    var maxLen = undefined;
 
     var currentState = data[initStateIndex];
 
@@ -140,6 +144,19 @@
 
     ////////////////
 
+
+    function getMaxLen(){
+      var sections = getSections();
+      maxLen = -1;
+      sections.forEach(
+        function(elemt){
+          var len = elemt.name.length;
+          maxLen = maxLen < len ? len : maxLen;
+        }
+      );
+      console.log(maxLen);
+      return maxLen;
+    }
 
 
     function loadAll() {
@@ -161,6 +178,10 @@
 
     function getCurrentStateTitle(){
       return currentState.name;
+    }
+
+    function getSectionStructure(){
+      return sectionStructure;
     }
 
   }

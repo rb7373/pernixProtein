@@ -1,36 +1,31 @@
 .container-fluid(style="position: fixed)")
   .row
-      ul.menu.col-xs-10.col-sm-6.col-md-4.col-lg-4()
-        li
-          a.topMenuOption(href="#", ng-click="toogleOptionsMenu()")
-            span
-              ng-md-icon(icon="add", size="26", ng-show="!showMenu")
-              ng-md-icon(icon="remove", size="26", ng-show="showMenu")
-            span.titleMenu
-              | {{navigation.getCurrentStateTitle()}}
-        li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections")
-          a(href="#")
-            span.subTitleMenu
-              | {{section.name}}
-          ul
-            li
-              a(href="#")
-                span.subTitleItemMenu
-                  | Objectives
-            li
-              a(href="#")
-                span.subTitleItemMenu
-                  | Animation
-            li
-              a(href="#")
-                span.subTitleItemMenu
-                  | Practice Session
-        li
-          a.topMenuOption.fadeMenu(ng-show="showMenu")
-            div
-              span.footerSubTitleMenu
-                | Voet, Voet & Pratt
-            div
-              span.footerTitleMenu
-                | Fundamentals of Biochemistry
+    ul#mainTopMenu.menu(ng-class="{'menuShadow':showMenu}",
+    ng-style="{'width': widthMenu + 'px' }", ng-mouseleave = "closeOnLeaveMouse()")
+      li
+        a.topMenuOption.menuShadow(href="#", ng-click="toogleOptionsMenu()")
+          span
+            ng-md-icon(icon="{{currentIcon}}", size="26", options = '{"duration": 375}')
+            //ng-md-icon(icon="remove", size="26", ng-show="showMenu")
+          span.titleMenu
+            | {{navigation.getCurrentStateTitle()}}
+      li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections",
+      ng-class="{'active' : isSelectedSubSection($index)}")
+        a(href="#", ng-click="updateCurrentSubSection($index)")
+          span.subTitleMenu
+            | {{section.name}}
+        ul
+          li(ng-repeat="item in navigation.getSectionStructure()")
+            a(href="#")
+              span.subTitleItemMenu
+                | {{item}}
+      li
+        a.topMenuOption.fadeMenu(ng-show="showMenu")
+          div
+            span.footerSubTitleMenu
+              | Voet, Voet & Pratt
+          div
+            span.footerTitleMenu
+              | Fundamentals of Biochemistry
 
+//, ng-mouseleave = "hideOptions()"
