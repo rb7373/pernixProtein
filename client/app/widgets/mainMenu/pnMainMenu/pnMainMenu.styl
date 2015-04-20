@@ -1,5 +1,3 @@
-
-
 //variables
 $mainColorMenuDark = #222
 $mainColorMenuLight = white
@@ -7,43 +5,44 @@ $subMenuHover = #EBEBEB
 $subMenuBorder = #DEDEDE
 $subMenuMenuLight = white
 
-
-.menu {
-  margin: 0 auto;
-  padding: 0;
+.menu
+  margin 0 auto
+  padding 0
   position absolute
   z-index 100
-}
+  &:hover
+    cursor hand
 
-.menuShadow{
+
+.menuShadow {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
-.titleMenu{
+.titleMenu {
   font-size 16px
   margin-right: 11px;
   margin-left: 16px;
 }
 
-.footerTitleMenu{
+.footerTitleMenu {
   font-size 14px
   margin-left: 20px;
   font-weight: bold;
 }
 
-.footerSubTitleMenu{
+.footerSubTitleMenu {
   font-size 12px
   margin-left: 20px;
 }
 
-.subTitleMenu{
+.subTitleMenu {
   font-size 14px
   margin-left: 41px;
 }
 
-.subTitleItemMenu{
+.subTitleItemMenu {
   font-size 12px
   margin-left: 59px;
 }
@@ -83,8 +82,8 @@ $subMenuMenuLight = white
   color: #000;
   border: solid 1px;
   margin-bottom: -1px;
-  padding: 10px 10px 5px;
   margin-right: 14px;
+  padding-bottom: 10px;
 }
 
 .menu > li:last-child a {
@@ -117,11 +116,11 @@ $subMenuMenuLight = white
   transition-timing-function: ease-out;
 }
 
-
 .menu > li.active li a {
   display: table;
   margin-top: 1px;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 14px;
   width: 100%;
   height: 1em;
   -webkit-transition-property: all;
@@ -139,7 +138,6 @@ $subMenuMenuLight = white
 .menu li li:last-child a {
   border-bottom solid 0px
 }
-
 
 .subMenu a:hover {
   background: $subMenuHover;
@@ -164,5 +162,11 @@ $subMenuMenuLight = white
   animation: 0.5s fadeIn ease;
 }
 
+a {
+  outline: medium none !important;
+}
 
+a:active, a:focus {
+  outline: none;
+}
 

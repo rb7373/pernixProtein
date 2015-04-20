@@ -2,14 +2,15 @@
   .navbar.navbar-inverse.navbar-fixed-bottom
     .container-fluid.text-center
       .row
-        a.btn.navbar-btn.pull-left.pn-footer-button(ng-show='!!navigation.getNavigationState().previousTitle',
-        ng-click = '')
+        a.btn.navbar-btn.pull-left.pn-footer-button(ng-show='!!navigation.getPreviousTitle()',
+        ng-click = 'navigation.goPrevious()')
           span.glyphicon.glyphicon-triangle-left(aria-hidden='true')
-          | {{!!navigation.getNavigationState().previousTitle}}
+          | &nbsp {{navigation.getPreviousTitle()}}
 
-        a.btn.navbar-btn.pull-right.pn-footer-button
-          |  {{navigation.getNavigationState().nextTitle}}&nbsp;
+        a.btn.navbar-btn.pull-right.pn-footer-button(ng-show='!!navigation.getNextTitle()',
+        ng-click = 'navigation.goNext()')
+          | {{navigation.getNextTitle()}} &nbsp;
           span.glyphicon.glyphicon-triangle-right(aria-hidden='true')
 
         a.btn.navbar-btn.pn-footer-button()
-          |  &nbsp;&nbsp;{{navigation.getCurrentTitle()}}&nbsp;&nbsp;
+          |  {{navigation.getCurrentTitle()}}

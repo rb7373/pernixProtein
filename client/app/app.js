@@ -8,7 +8,8 @@ angular.module('proteinApp', [
     'ui.bootstrap',
     'ngAnimate',
     'ngMdIcons',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial'
 ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider

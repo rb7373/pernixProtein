@@ -3,23 +3,23 @@
     ul#mainTopMenu.menu(ng-class="{'menuShadow':showMenu}",
     ng-style="{'width': widthMenu }", ng-mouseleave = "closeOnLeaveMouse()")
       li
-        a.topMenuOption.menuShadow(href="#", ng-click="toogleOptionsMenu()")
+        a.topMenuOption.menuShadow(href="", ng-click="toogleOptionsMenu()")
           span
-            ng-md-icon(icon="{{currentIcon}}", size="24", options = '{"duration": 375}')
+            ng-md-icon(icon="{{currentIcon}}", size="22", options = '{"duration": 375}')
           span.titleMenu
             | {{navigation.getCurrentStateTitle()}}
       li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections",
       ng-class="{'active' : isSelectedSubSection($index)}")
-        a(href="#", ng-click="updateCurrentSubSection($index)")
+        a(href="", ng-click="updateCurrentSubSection($index)")
           span.subTitleMenu
             | {{section.name}}
         ul
           li(ng-repeat="item in navigation.getSectionStructure()")
-            a(href="#",ng-click = "selectOption($parent.$index, $index)")
+            a(href="", ng-click = "selectOption($parent.$index, $index)")
               span.subTitleItemMenu
                 | {{item}}
       li
-        a.topMenuOption.fadeMenu(ng-show="showMenu")
+        a.topMenuOption.fadeMenu(ng-show="showMenu", ng-click = "introduction()", href="")
           div
             span.footerSubTitleMenu
               | Voet, Voet & Pratt

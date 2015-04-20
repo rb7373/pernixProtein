@@ -26,9 +26,6 @@
 
     function link(scope, element, attrs) {
 
-      console.log('On leave: ' + scope.closeOnLeave);
-      console.log('On out side: ' + scope.closeOnLeave);
-
       element.bind('click', function(event) {
         event.stopPropagation();
       });
@@ -83,6 +80,10 @@
         scope.navigation.setCurrentSectionState(sectionIndex, subSectionIndex);
       }
 
+      function introduction(){
+        scope.selectOption(-1, -1);
+      }
+
       scope.showOptions = showOptions;
       scope.hideOptions = hideOptions;
       scope.toogleOptionsMenu = toogleOptionsMenu;
@@ -95,6 +96,7 @@
       //scope.widthMenu = scope.navigation.getMaxLen()*10+30 + 'px';
       scope.closeOnLeaveMouse = closeOnLeaveMouse;
       scope.selectOption = selectOption;
+      scope.introduction = introduction;
 
     }
   }

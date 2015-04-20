@@ -17,6 +17,8 @@
     vm.states = [];
     vm.currentState = [];
 
+    vm.navigation = navigationService;
+
 
     activate();
 

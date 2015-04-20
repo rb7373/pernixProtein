@@ -125,90 +125,182 @@
       getSections: getSections,
       getCurrentStateTitle: getCurrentStateTitle,
       getSectionStructure: getSectionStructure,
-      getMaxLen: getMaxLen,
-      setCurrentSectionState:setCurrentSectionState,
-      getCurrentTitle: getCurrentTitle
+      gettitleMaxLength: gettitleMaxLength,
+      setCurrentSectionState: setCurrentSectionState,
+      getCurrentTitle: getCurrentTitle,
+      getPreviousTitle: getPreviousTitle,
+      getNextTitle: getNextTitle,
+      goNext: goNext,
+      goPrevious: goPrevious
     };
 
-    var initSectionTitle = 'Introdution';
-    var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
     var initStateIndex = 0;
+    var notSection = -1;
+    var notSubSection = -1;
+    var notTitle = '';
+    var firstSection = 0;
+    var firstSubSection = 0;
 
-    var maxLen = undefined;
+    var initSectionTitle = 'Introduction';
+    var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
+
 
     var currentState = data[initStateIndex];
+
+    var titleMaxLength = -1;
+    var lastSection = currentState.sections.length - 1;
+    var lastSubSection = sectionStructure.length - 1;
 
     var currentSetionTitle = initSectionTitle;
 
     var currentSectionState = {
-      section: -1,
-      subSection: -1
-    }
-
-    var nextSectionState = {
-      section: -1,
-      subSection: -1
-    }
-
-    var previosSectionState = {
-      section: -1,
-      subSection: -1
+      section: notSection,
+      subSection: notSubSection
     }
 
     return service;
 
     ////////////////
 
-    function getCurrentTitle(){
-      var sectionIndex = currentSectionState.section;
-      var currentTitle;
-      currentTitle = sectionIndex == -1 ? initSectionTitle : getSections[sectionIndex].name;
-      return currentTitle;
-    }
-
-    function setCurrentSectionState(sectionIndex, subSectionIndex){
-      currentSectionState.section = sectionIndex;
-      currentSectionState.subSection = subSectionIndex;
-    }
-
-    function getMaxLenSectionTitle(elemt){
-      var len = elemt.name.length;
-      maxLen = maxLen < len ? len : maxLen;
-    }
-
-    function getMaxLen(){
-      var sections = getSections();
-      maxLen = -1;
-      sections.forEach(getMaxLenSectionTitle);
-      return maxLen;
-    }
-
-
     function loadAll() {
       return $q.when(data);
     }
 
-    function getNextSubSectionIndex(){
-      var nextSubSectionIndex = currentSectionState.subSection == 2 ? 0 : currentSectionState.subSection++;
-      return nextSubSectionIndex;
+    function getCurrentTitle() {
+      var sectionIndex = currentSectionState.section;
+      var currentTitle;
+      currentTitle = sectionIndex === notSection ? initSectionTitle : getSections()[sectionIndex].name;
+      return currentTitle;
     }
 
-    function getPreviosSubSectionIndex(){
-      var previosSubSectionIndex = currentSectionState.subSection == 0 ? 0 : currentSectionState.subSection--;
-      return previosSubSectionIndex;
+    function getPreviousTitle() {
+      var previousTitle;
+      var sectionIndex = currentSectionState.section;
+      var subSectionIndex = currentSectionState.subSection;
+
+      if (isPreSection(sectionIndex, subSectionIndex)) {
+        previousTitle = notTitle;
+      } else if (isFirstSubSectionOfFirstSection(sectionIndex, subSectionIndex)) {
+        previousTitle = initSectionTitle;
+      } else if (!isFirstSection(sectionIndex) && isFirstSubSection(subSectionIndex)) {
+        previousTitle = getSections()[sectionIndex - 1].name
+      } else {
+        previousTitle = getSectionStructure()[subSectionIndex - 1];
+      }
+      return previousTitle;
+    }
+
+    function getNextTitle() {
+      var nextTitle;
+      var sectionIndex = currentSectionState.section;
+      var subSectionIndex = currentSectionState.subSection;
+
+      if (isLastSubSectionOfLastSection(sectionIndex, subSectionIndex)) {
+        nextTitle = notTitle;
+      } else if (isPreSection(sectionIndex, subSectionIndex)) {
+        nextTitle = getSections()[firstSection].name;
+      } else if (isLastSubSection(subSectionIndex) && !isLastSection(sectionIndex)) {
+        nextTitle = getSections()[sectionIndex + 1].name;
+      } else {
+        nextTitle = getSectionStructure()[subSectionIndex + 1];
+      }
+      return nextTitle;
+    }
+
+
+    function setCurrentSectionState(sectionIndex, subSectionIndex) {
+      currentSectionState.section = sectionIndex;
+      currentSectionState.subSection = subSectionIndex;
+      console.log('Current section state');
+      console.log(sectionIndex, subSectionIndex);
+    }
+
+    function gettitleMaxLengthSectionTitle(elemt) {
+      var len = elemt.name.length;
+      titleMaxLength = titleMaxLength < len ? len : titleMaxLength;
+    }
+
+    function gettitleMaxLength() {
+      var sections = getSections();
+      titleMaxLength = -1;
+      sections.forEach(gettitleMaxLengthSectionTitle);
+      return titleMaxLength;
+    }
+
+    function goNext() {
+      var sectionIndex = currentSectionState.section;
+      var subSectionIndex = currentSectionState.subSection;
+      if (isPreSection(sectionIndex, subSectionIndex)) {
+        setCurrentSectionState(firstSection, firstSubSection);
+        return true;
+      } else if (isLastSubSection(subSectionIndex) && !isLastSection(sectionIndex)) {
+        setCurrentSectionState(sectionIndex + 1, firstSubSection);
+        return true;
+      } else if (!isLastSubSectionOfLastSection()) {
+        setCurrentSectionState(sectionIndex, subSectionIndex + 1);
+        return true;
+      }
+    }
+
+    function goPrevious() {
+      var sectionIndex = currentSectionState.section;
+      var subSectionIndex = currentSectionState.subSection;
+      if (isFirstSubSectionOfFirstSection(sectionIndex, subSectionIndex)) {
+        setCurrentSectionState(notSection, notSubSection);
+        return true;
+      } else if (isFirstSubSection(subSectionIndex)) {
+        setCurrentSectionState(sectionIndex - 1, firstSubSection);
+        return true;
+      } else {
+        setCurrentSectionState(sectionIndex, subSectionIndex - 1);
+        return true;
+      }
     }
 
     function getSections() {
       return currentState.sections;
     }
 
-    function getCurrentStateTitle(){
+    function getCurrentStateTitle() {
       return currentState.name;
     }
 
-    function getSectionStructure(){
+    function getSectionStructure() {
       return sectionStructure;
     }
+
+
+    //AUX FUNCTIONS
+
+    function isLastSubSectionOfLastSection(section, subSection) {
+      return section === lastSection && subSection === lastSubSection;
+    }
+
+    function isFirstSubSection(subSection) {
+      return subSection === firstSubSection;
+    }
+
+
+    function isFirstSubSectionOfFirstSection(section, subSection) {
+      return section === firstSection && subSection === firstSubSection;
+    }
+
+    function isPreSection(section, subSection) {
+      return section === notSection | subSection === notSubSection;
+    }
+
+    function isFirstSection(section) {
+      return section === firstSection;
+    }
+
+    function isLastSubSection(subSection) {
+      return subSection === lastSubSection;
+    }
+
+    function isLastSection(section) {
+      return section === lastSection;
+    }
+
 
   }
 })();
