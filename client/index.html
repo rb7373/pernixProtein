@@ -13,7 +13,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
       <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
       <!-- endbower -->
     <!-- endbuild -->
@@ -31,12 +30,14 @@
     <![endif]-->
 
 
-    <div class="col-md-12">
+    <div>
       <br>
       <pn-main-menu close-on-leave = "false" close-on-click-out-side = "true"></pn-main-menu>
     </div>
+
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
+
     <pn-footer></pn-footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -56,7 +57,6 @@
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -64,7 +64,6 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/lodash.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
       <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
       <script src="bower_components/angular-touch/angular-touch.js"></script>
@@ -79,7 +78,7 @@
           <!-- injector:js -->
           <script src="app/data/navigationService/navigation.service.js"></script>
           <script src="app/layout/main/main.controller.js"></script>
-          <script src="app/layout/main/main.js"></script>
+          <script src="app/layout/main/main.states.js"></script>
           <script src="app/widgets/footer/pn-footer/pn-footer.directive.js"></script>
           <script src="app/widgets/mainMenu/pnMainMenu/pnMainMenu.directive.js"></script>
           <script src="components/modal/modal.service.js"></script>

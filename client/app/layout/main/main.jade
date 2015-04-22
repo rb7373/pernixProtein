@@ -1,4 +1,13 @@
+div.mainContent(flex="")
+  div(layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
+    div.bg-green(flex="")
+      .mainTitle(layout="column" layout-align="start center")
+        h1
+          | Section {{vm.navigation.getCurrentSectionState() + 1}}
+        h2
+          | Subtitle
+    div.bg-blue(flex="")
+      | Pop Ups
 
-h1.text-center
-  | Fundamentals of Biochemistry
+
 

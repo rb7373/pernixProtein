@@ -125,13 +125,14 @@
       getSections: getSections,
       getCurrentStateTitle: getCurrentStateTitle,
       getSectionStructure: getSectionStructure,
-      gettitleMaxLength: gettitleMaxLength,
+      getTitleMaxLength: getTitleMaxLength,
       setCurrentSectionState: setCurrentSectionState,
       getCurrentTitle: getCurrentTitle,
       getPreviousTitle: getPreviousTitle,
       getNextTitle: getNextTitle,
       goNext: goNext,
-      goPrevious: goPrevious
+      goPrevious: goPrevious,
+      getCurrentSectionState: getCurrentSectionState
     };
 
     var initStateIndex = 0;
@@ -215,15 +216,15 @@
       console.log(sectionIndex, subSectionIndex);
     }
 
-    function gettitleMaxLengthSectionTitle(elemt) {
+    function getTitleMaxLengthSectionTitle(elemt) {
       var len = elemt.name.length;
       titleMaxLength = titleMaxLength < len ? len : titleMaxLength;
     }
 
-    function gettitleMaxLength() {
+    function getTitleMaxLength() {
       var sections = getSections();
       titleMaxLength = -1;
-      sections.forEach(gettitleMaxLengthSectionTitle);
+      sections.forEach(getTitleMaxLengthSectionTitle);
       return titleMaxLength;
     }
 
@@ -269,6 +270,9 @@
       return sectionStructure;
     }
 
+    function getCurrentSectionState(){
+      return angular.copy(currentSectionState);
+    }
 
     //AUX FUNCTIONS
 

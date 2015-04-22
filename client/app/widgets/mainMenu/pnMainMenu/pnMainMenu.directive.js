@@ -93,7 +93,6 @@
       scope.isSelectedSubSection = isSelectedSubSection;
 
       scope.widthMenu = 'inherit';
-      //scope.widthMenu = scope.navigation.getMaxLen()*10+30 + 'px';
       scope.closeOnLeaveMouse = closeOnLeaveMouse;
       scope.selectOption = selectOption;
       scope.introduction = introduction;
