@@ -5,35 +5,30 @@
     .module('proteinApp')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['navigationService'];
+  MainController.$inject = ['navigationService','$mdMedia', '$scope'];
 
   /* @ngInject */
-  function MainController(navigationService) {
+  function MainController(navigationService, $mdMedia, $scope) {
     /* jshint validthis: true */
     var vm = this;
 
     vm.activate = activate;
-    vm.title = 'MainController';
     vm.states = [];
     vm.currentState = [];
 
     vm.navigation = navigationService;
-
 
     activate();
 
     ////////////////
 
     function activate() {
-      navigationService.loadAll().then(function (data) {
-        vm.states = [].concat(data);
-        vm.currentState = vm.states[0];
-        //console.log(vm.currentState);
-      });
-
+      vm.title = navigationService.getCurrentStateTitle();
+      vm.screenIsSmall = $mdMedia('sm');
     }
 
-
-
+    $scope.$watch(function() { return $mdMedia('sm'); }, function(sm) {
+      vm.screenIsSmall = sm;
+    });
   }
 })();
