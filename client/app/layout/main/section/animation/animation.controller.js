@@ -3,20 +3,17 @@
 
   angular
     .module('proteinApp')
-    .controller('ObjectivesController', ObjectivesController);
+    .controller('AnimationController', AnimationController);
 
-  ObjectivesController.$inject = ['navigationService'];
+  AnimationController.$inject = ['navigationService'];
 
   /* @ngInject */
-  function ObjectivesController(navigationService) {
+  function AnimationController(navigationService) {
     /* jshint validthis: true */
     var vm = this;
 
     vm.activate = activate;
-    vm.title = 'ObjectivesController';
-    vm.states = [];
-    vm.currentState = [];
-
+    vm.title = 'AnimationController';
     vm.navigation = navigationService;
 
 

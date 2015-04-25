@@ -1,0 +1,29 @@
+div.mainContent(flex="")
+  div(layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column", layout-align="center start")
+    div(flex="", layout-fill="", layout-padding = "")
+      div(layout="column", layout-align="start center")
+        .mainTitle(layout="column" layout-align="start center")
+          h1
+            | Section {{objectivesController.navigation.getCurrentSectionNumber()}}
+          h2
+            | {{objectivesController.navigation.getCurrentTitle()}}
+    div(flex="")
+      div(layout="column", layout-align="start center")
+        md-whiteframe.md-whiteframe-z2.whiteframe(layout="column" layout-align="center start")
+          h2.titleGoals
+            | Goals
+          md-content(layout-padding="", ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()")
+            | * {{objective}}
+
+        div.margin-sm(layout="column", layout-align="start center", show-sm)
+          br
+
+
+
+
+
+
+
+
+
+

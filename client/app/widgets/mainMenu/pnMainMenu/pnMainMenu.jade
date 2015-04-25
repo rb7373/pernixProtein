@@ -14,11 +14,11 @@
           | {{section.name}}
       ul
         li(ng-repeat="item in navigation.getSectionStructure()")
-          a(href="", ng-click = "selectOption($parent.$index, $index)")
+          a(ui-sref="{{navigation.getSectionStructureStates()[$index]}}", ng-click = "selectOption($parent.$index, $index)")
             span.subTitleItemMenu
               | {{item}}
     li
-      a.topMenuOption.fadeMenu(ng-show="showMenu", ng-click = "introduction()", href="")
+      a.topMenuOption.fadeMenu(ng-show="showMenu", ng-click = "introduction()", ui-sref="main")
         div
           span.footerSubTitleMenu
             | Voet, Voet & Pratt

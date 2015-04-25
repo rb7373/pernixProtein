@@ -125,9 +125,12 @@
       getSections: getSections,
       getCurrentStateTitle: getCurrentStateTitle,
       getSectionStructure: getSectionStructure,
+      getSectionStructureStates: getSectionStructureStates,
       getTitleMaxLength: getTitleMaxLength,
       setCurrentSectionState: setCurrentSectionState,
       getCurrentTitle: getCurrentTitle,
+      getCurrentSectionNumber: getCurrentSectionNumber,
+      getCurrentObjectives: getCurrentObjectives,
       getPreviousTitle: getPreviousTitle,
       getNextTitle: getNextTitle,
       goNext: goNext,
@@ -144,7 +147,7 @@
 
     var initSectionTitle = 'Introduction';
     var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
-
+    var sectionStructureStates = ['objectives', 'animation', 'practice'];
 
     var currentState = data[initStateIndex];
 
@@ -212,8 +215,6 @@
     function setCurrentSectionState(sectionIndex, subSectionIndex) {
       currentSectionState.section = sectionIndex;
       currentSectionState.subSection = subSectionIndex;
-      console.log('Current section state');
-      console.log(sectionIndex, subSectionIndex);
     }
 
     function getTitleMaxLengthSectionTitle(elemt) {
@@ -270,8 +271,23 @@
       return sectionStructure;
     }
 
+    function getSectionStructureStates() {
+      return sectionStructureStates;
+    }
+
     function getCurrentSectionState(){
       return angular.copy(currentSectionState);
+    }
+
+    function getCurrentSectionNumber(){
+      return currentSectionState.section + 1; // Init in 0
+    }
+
+    function getCurrentObjectives(){
+      var sectionIndex = currentSectionState.section;
+      var objectives;
+      objectives = sectionIndex != notSection ? getSections()[sectionIndex].objectives : '';
+      return objectives;
     }
 
     //AUX FUNCTIONS

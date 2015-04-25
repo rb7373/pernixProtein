@@ -5,10 +5,10 @@
     .module('proteinApp')
     .directive('pnMainMenu', pnMainMenu);
 
-  pnMainMenu.$inject = ['$window', 'navigationService', '$document'];
+  pnMainMenu.$inject = ['$window', 'navigationService', '$document', '$mdMedia'];
 
   /* @ngInject */
-  function pnMainMenu($window, navigationService, $document) {
+  function pnMainMenu($window, navigationService, $document, $mdMedia) {
     // Usage:
     //
     // Creates:
@@ -96,6 +96,8 @@
       scope.closeOnLeaveMouse = closeOnLeaveMouse;
       scope.selectOption = selectOption;
       scope.introduction = introduction;
+
+      scope.screenIsSmall = $mdMedia('sm');
 
     }
   }
