@@ -5,7 +5,7 @@
     .module('proteinApp')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['navigationService','$mdMedia', '$scope', '$window'];
+  MainController.$inject = ['navigationService', '$mdMedia', '$scope', '$window'];
 
   /* @ngInject */
   function MainController(navigationService, $mdMedia, $scope, $window) {
@@ -27,7 +27,9 @@
       vm.screenIsSmall = $mdMedia('sm');
     }
 
-    $scope.$watch(function() { return $mdMedia('sm'); }, function(sm) {
+    $scope.$watch(function () {
+      return $mdMedia('sm');
+    }, function (sm) {
       vm.screenIsSmall = sm;
     });
 

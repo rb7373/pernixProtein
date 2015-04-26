@@ -2,7 +2,6 @@
 
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
 
-
 //@font-face {
 //  font-family: "Open Sans";
 //  src: url("../assets/fonts/open-sans/bold.eot");
@@ -25,6 +24,7 @@
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/light.eot");
@@ -32,6 +32,7 @@
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/light-italic.eot");
@@ -39,6 +40,7 @@
   font-weight: 200;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/regular.eot");
@@ -46,6 +48,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/regular.eot");
@@ -53,6 +56,7 @@
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/semibold.eot");
@@ -60,6 +64,7 @@
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/semibold-italic.eot");
@@ -67,6 +72,7 @@
   font-weight: 600;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/bold.eot");
@@ -74,6 +80,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/bold-italic.eot");
@@ -81,6 +88,7 @@
   font-weight: bold;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/extrabold.eot");
@@ -88,6 +96,7 @@
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans;
   src: url("../assets/fonts/open-sans/extrabold-italic.eot");
@@ -95,6 +104,7 @@
   font-weight: 800;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans-condensed;
   src: url("../assets/fonts/open-sans-condensed/light.eot");
@@ -102,6 +112,7 @@
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: open-sans-condensed;
   src: url("../assets/fonts/open-sans-condensed/light-italic.eot");
@@ -109,6 +120,7 @@
   font-weight: 200;
   font-style: italic;
 }
+
 @font-face {
   font-family: open-sans-condensed;
   src: url("../assets/fonts/open-sans-condensed/bold.eot");
@@ -116,7 +128,6 @@
   font-weight: bold;
   font-style: normal;
 }
-
 
 //////////////////////////////////////////////
 
@@ -128,4 +139,65 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'open-sans-condensed', sans-serif;
+}
+
+.mainContent
+  margin-top 10%
+
+.mainContent-sm
+  margin-top 50px
+
+.mainContentAnimation-sm
+  margin-top 90px
+
+
+//video {
+//  width: 100%;
+//  height: auto;
+//  max-height: 100%;
+//}
+
+$bg-green = #009688
+$bg-blue = #3949ab
+
+.bg-green
+  background-color $bg-green
+
+.bg-blue
+  background-color $bg-blue
+
+.bg-dark
+  background-color #222
+
+
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.ui-view-container {
+  position: relative;
+  height: 65px;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
 }
