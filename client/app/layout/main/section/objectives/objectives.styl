@@ -20,8 +20,6 @@ $bg-blue = #3949ab
 .content-frame
   padding-bottom 16px
 
-
-
 .titleGoals
   margin-top 0px
   font-weight bold
@@ -29,7 +27,11 @@ $bg-blue = #3949ab
 .margin-sm
   margin-bottom 85px
 
+.objective-button-arrow
+  font-size smaller
+
 .objective-button a {
+  font-size: large;
   font-weight bold
   display: table;
   padding: 10px;
@@ -38,7 +40,7 @@ $bg-blue = #3949ab
   height inherit
   background-color: #222;
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   vertical-align: top;
   color: #fff;
   overflow: hidden;
@@ -48,4 +50,15 @@ $bg-blue = #3949ab
   transition-property: background;
   transition-duration: 0.4s;
   transition-timing-function: ease-out;
+}
+
+
+/* when showing the picture */
+.fadeFrame {
+  animation: 0.5s fadeInUp ease;
+}
+
+
+.coverFadeInLeft {
+  animation: 0.5s slideInLeft ease;
 }

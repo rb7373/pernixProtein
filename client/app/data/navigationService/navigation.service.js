@@ -5,10 +5,12 @@
     .module('proteinApp')
     .factory('navigationService', navigationService);
 
-  navigationService.$inject = ['$q'];
+  navigationService.$inject = ['$q', '$location', '$http'];
 
   /* @ngInject */
-  function navigationService($q) {
+  function navigationService($q, $location, $http) {
+
+    ///////////// Data
 
     var data = [{
       id: 1,
@@ -120,28 +122,13 @@
       },]
     }];
 
-    var service = {
-      loadAll: loadAll,
-      getSections: getSections,
-      getCurrentStateTitle: getCurrentStateTitle,
-      getSectionStructure: getSectionStructure,
-      getSectionStructureStates: getSectionStructureStates,
-      getTitleMaxLength: getTitleMaxLength,
-      setCurrentSectionState: setCurrentSectionState,
-      getCurrentTitle: getCurrentTitle,
-      getCurrentSectionNumber: getCurrentSectionNumber,
-      getCurrentObjectives: getCurrentObjectives,
-      getPreviousTitle: getPreviousTitle,
-      getNextTitle: getNextTitle,
-      goNext: goNext,
-      goPrevious: goPrevious,
-      getCurrentSectionState: getCurrentSectionState
-    };
+    ///////////// Data
 
     var initStateIndex = 0;
     var notSection = -1;
     var notSubSection = -1;
     var notTitle = '';
+    var notState = 'main';
     var firstSection = 0;
     var firstSubSection = 0;
 
@@ -162,6 +149,24 @@
       subSection: notSubSection
     }
 
+    var service = {
+      loadAll: loadAll,
+      getSections: getSections,
+      getCurrentStateTitle: getCurrentStateTitle,
+      getSectionStructure: getSectionStructure,
+      getSectionStructureStates: getSectionStructureStates,
+      getTitleMaxLength: getTitleMaxLength,
+      setCurrentSectionState: setCurrentSectionState,
+      getCurrentTitle: getCurrentTitle,
+      getCurrentSectionNumber: getCurrentSectionNumber,
+      getCurrentObjectives: getCurrentObjectives,
+      getPrevious: getPrevious,
+      getNext: getNext,
+      goNext: goNext,
+      goPrevious: goPrevious,
+      getCurrentSectionState: getCurrentSectionState
+    };
+
     return service;
 
     ////////////////
@@ -177,37 +182,43 @@
       return currentTitle;
     }
 
-    function getPreviousTitle() {
-      var previousTitle;
+    function getPrevious() {
+      var previous = {};
       var sectionIndex = currentSectionState.section;
       var subSectionIndex = currentSectionState.subSection;
+
+      previous.title = notTitle;
 
       if (isPreSection(sectionIndex, subSectionIndex)) {
-        previousTitle = notTitle;
+        previous.title = notTitle;
       } else if (isFirstSubSectionOfFirstSection(sectionIndex, subSectionIndex)) {
-        previousTitle = initSectionTitle;
+        previous.title = initSectionTitle;
       } else if (!isFirstSection(sectionIndex) && isFirstSubSection(subSectionIndex)) {
-        previousTitle = getSections()[sectionIndex - 1].name
+        previous.title = getSections()[sectionIndex - 1].name
       } else {
-        previousTitle = getSectionStructure()[subSectionIndex - 1];
+        previous.title = getSectionStructure()[subSectionIndex - 1];
       }
-      return previousTitle;
+
+      return previous;
     }
 
-    function getNextTitle() {
-      var nextTitle;
+    function getNext() {
+      var nextTitle = {};
       var sectionIndex = currentSectionState.section;
       var subSectionIndex = currentSectionState.subSection;
 
+      nextTitle.state = notState;
+
       if (isLastSubSectionOfLastSection(sectionIndex, subSectionIndex)) {
-        nextTitle = notTitle;
+        nextTitle.title = notTitle;
       } else if (isPreSection(sectionIndex, subSectionIndex)) {
-        nextTitle = getSections()[firstSection].name;
+        nextTitle.title = getSections()[firstSection].name;
       } else if (isLastSubSection(subSectionIndex) && !isLastSection(sectionIndex)) {
-        nextTitle = getSections()[sectionIndex + 1].name;
+        nextTitle.title = getSections()[sectionIndex + 1].name;
       } else {
-        nextTitle = getSectionStructure()[subSectionIndex + 1];
+        nextTitle.title = getSectionStructure()[subSectionIndex + 1];
       }
+
       return nextTitle;
     }
 
@@ -234,12 +245,15 @@
       var subSectionIndex = currentSectionState.subSection;
       if (isPreSection(sectionIndex, subSectionIndex)) {
         setCurrentSectionState(firstSection, firstSubSection);
+        updateLocation(firstSubSection);
         return true;
       } else if (isLastSubSection(subSectionIndex) && !isLastSection(sectionIndex)) {
         setCurrentSectionState(sectionIndex + 1, firstSubSection);
+        updateLocation(firstSubSection);
         return true;
       } else if (!isLastSubSectionOfLastSection()) {
         setCurrentSectionState(sectionIndex, subSectionIndex + 1);
+        updateLocation(subSectionIndex + 1);
         return true;
       }
     }
@@ -249,12 +263,15 @@
       var subSectionIndex = currentSectionState.subSection;
       if (isFirstSubSectionOfFirstSection(sectionIndex, subSectionIndex)) {
         setCurrentSectionState(notSection, notSubSection);
+        goLocationMain();
         return true;
       } else if (isFirstSubSection(subSectionIndex)) {
         setCurrentSectionState(sectionIndex - 1, firstSubSection);
+        updateLocation(firstSubSection);
         return true;
       } else {
         setCurrentSectionState(sectionIndex, subSectionIndex - 1);
+        updateLocation(subSectionIndex - 1);
         return true;
       }
     }
@@ -275,15 +292,15 @@
       return sectionStructureStates;
     }
 
-    function getCurrentSectionState(){
+    function getCurrentSectionState() {
       return angular.copy(currentSectionState);
     }
 
-    function getCurrentSectionNumber(){
+    function getCurrentSectionNumber() {
       return currentSectionState.section + 1; // Init in 0
     }
 
-    function getCurrentObjectives(){
+    function getCurrentObjectives() {
       var sectionIndex = currentSectionState.section;
       var objectives;
       objectives = sectionIndex != notSection ? getSections()[sectionIndex].objectives : '';
@@ -291,6 +308,18 @@
     }
 
     //AUX FUNCTIONS
+
+    function getNextSectionState(subSection) {
+      var next;
+      next = subSection === 2 ? firstSubSection : subSection + 1;
+      return sectionStructureStates[next];
+    }
+
+    function getPreviousSectionState(subSection) {
+      var previous;
+      previous = subSection === 0 ? lastSubSection : subSection - 1;
+      return sectionStructureStates[previous];
+    }
 
     function isLastSubSectionOfLastSection(section, subSection) {
       return section === lastSection && subSection === lastSubSection;
@@ -321,6 +350,16 @@
       return section === lastSection;
     }
 
+    function updateLocation(subSection) {
+      var path = '/' + sectionStructureStates[subSection];
+      console.log('Path: ' + path);
+      $location.path(path);
+    }
+
+    function goLocationMain() {
+      var path = '/' + notState;
+      $location.path(path);
+    }
 
   }
 })();

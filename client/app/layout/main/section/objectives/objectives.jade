@@ -1,7 +1,7 @@
 div(flex="",
 ng-class="{'mainContent-sm' : objectivesController.screenIsSmall, 'mainContent': !objectivesController.screenIsSmall}")
   div(layout="row", layout-margin="", layout-fill="", layout-sm="column", layout-align="center start")
-    div.fill-95(flex="")
+    div.fill-95.coverFadeInLeft(flex="")
       div(layout="column", layout-align="start center")
         .mainTitle(layout="column" layout-align="start center")
           h1
@@ -10,16 +10,19 @@ ng-class="{'mainContent-sm' : objectivesController.screenIsSmall, 'mainContent':
             | {{objectivesController.navigation.getCurrentTitle()}}
     div.fill-95(flex="", layout-padding = "")
       div(layout="column", layout-align="start center", layout-padding = "")
-        md-whiteframe.md-whiteframe-z2.whiteframe(layout="column", layout-align="center start", layout-padding = "")
+        md-whiteframe.md-whiteframe-z2.whiteframe.fadeFrame(layout="column", layout-align="center start",
+        layout-padding = "", ng-animate="'box'")
           h2.titleGoals
             | Goals
-          md-content(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()", layout-padding = "", flex = "")
+          md-content(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()", layout-padding = "",
+          flex = "", layout-align="center center")
             | * {{objective}}
-          .objective-button(flex = "", layout-fill="")
+          .objective-button.text-center(flex = "", layout-fill="", layout-align="center center",
+          ng-click = 'navigation.goNext()')
             a
               span
                 | Watch animation &nbsp;
-              span.arrow.glyphicon.glyphicon-triangle-right(aria-hidden='true')
+              span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
 
         div.margin-sm(layout="column", layout-align="start center", show-sm)
           br

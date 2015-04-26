@@ -35,6 +35,10 @@
 
     }
 
+    function isReady(){
+      return true;
+    }
+
     $scope.$watch(function() { return $mdMedia('sm'); }, function(sm) {
       vm.screenIsSmall = sm;
     });
