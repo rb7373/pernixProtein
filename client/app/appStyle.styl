@@ -129,6 +129,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'videogular';
+  src: url("../assets/fonts/videogular.eot");
+  src: url("../assets/fonts/videogular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/videogular.woff") format("woff"), url("../assets/fonts/videogular.ttf") format("truetype"), url("../assets/fonts/videogular.svg#videogular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 //////////////////////////////////////////////
 
 body {
@@ -200,4 +208,34 @@ to prevent collapsing during animation*/
 
 [ui-view].ng-leave-active {
   opacity: 0;
+}
+
+// VIDEO
+
+.videogular-container {
+  width: 100%;
+  height: 320px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .videogular-container {
+    width: 1170px;
+    height: 528.75px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .videogular-container {
+    width: 940px;
+    height: 528.75px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .videogular-container {
+    width: 728px;
+    height: 409.5px;
+  }
 }
