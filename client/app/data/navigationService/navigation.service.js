@@ -335,7 +335,7 @@
     }
 
     function isPreSection(section, subSection) {
-      return section === notSection | subSection === notSubSection;
+      return section === notSection || subSection === notSubSection;
     }
 
     function isFirstSection(section) {
