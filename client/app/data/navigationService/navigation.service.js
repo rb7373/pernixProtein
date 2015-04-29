@@ -160,6 +160,7 @@
       setCurrentSectionState: setCurrentSectionState,
       getCurrentTitle: getCurrentTitle,
       getCurrentSectionNumber: getCurrentSectionNumber,
+      getCurrentSection: getCurrentSection,
       getCurrentObjectives: getCurrentObjectives,
       getCurrentAnimation: getCurrentAnimation,
       getPrevious: getPrevious,
@@ -307,6 +308,10 @@
 
     function getCurrentSectionNumber() {
       return currentSectionState.section + 1; // Init in 0
+    }
+
+    function getCurrentSection() {
+      return currentSectionState.section; // Init in 0
     }
 
     function getCurrentObjectives() {

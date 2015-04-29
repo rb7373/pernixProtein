@@ -28,6 +28,13 @@
   <link rel="stylesheet" href="app/widgets/mainMenu/pnMainMenu/animate.css">
   <!-- endinjector -->
   <!-- endbuild -->
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="components/JSmol/JSmol.min.nojq.js"></script>
+  <script src="components/JSmol/audio5.js"></script>
+
+  <script src="components/JSmol/detectSpecs.js"></script>
+
 </head>
 <body ng-app="proteinApp">
 <!--[if lt IE 7]>
@@ -71,7 +78,6 @@
 <![endif]-->
 <!-- build:js({client,node_modules}) app/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -106,8 +112,11 @@
 <script src="app/layout/main/section/section.states.js"></script>
 <script src="app/widgets/footer/pn-footer/pn-footer.directive.js"></script>
 <script src="app/widgets/mainMenu/pnMainMenu/pnMainMenu.directive.js"></script>
-<script src="components/modal/modal.service.js"></script>
-<script src="components/navbar/navbar.controller.js"></script>
+<script src="app/widgets/practice/pn-practice/pn-practice.directive.js"></script>
+<script src="components/js/controller.js"></script>
+<script src="components/js/proteinStructure.js"></script>
+<script src="components/practices/controller.js"></script>
+<script src="components/practices/proteinStructure.js"></script>
 <!-- endinjector -->
 <!-- endbuild -->
 
