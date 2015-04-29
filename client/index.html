@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
@@ -17,8 +17,9 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(client) app/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/videogular-themes-default/videogular.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/videogular-themes-default/videogular.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp,client}) app/app.css -->
@@ -35,12 +36,11 @@
 <![endif]-->
 
 <div>
-  <br>
   <pn-main-menu close-on-leave="false" close-on-click-out-side="true"></pn-main-menu>
 </div>
 
 <!-- Add your site or application content here -->
-<div class="ui-view-container" id ="content">
+<div class="ui-view-container">
   <div ui-view="" class = "view-slide-in"></div>
 </div>
 
@@ -83,6 +83,7 @@
 <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/svg-morpheus/compile/minified/svg-morpheus.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/videogular/videogular.js"></script>
 <script src="bower_components/videogular-controls/vg-controls.js"></script>
 <script src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>

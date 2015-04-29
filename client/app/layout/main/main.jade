@@ -1,17 +1,27 @@
-div(flex="", layout-fill = "",
-ng-class="{'mainContent-sm' : mainController.screenIsSmall, 'mainContent': !mainController.screenIsSmall}")
-  div(layout="column", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
-    div(flex="", layout-fill = "")
-      div(layout="column", layout-fill = "", layout-align="start center",
-      ng-class="{'mainTitleSm' : mainController.screenIsSmall, 'mainTitle': !mainController.screenIsSmall}")
+//div(flex="", layout-fill = "",
+//ng-class="{'mainContent-sm' : mainController.screenIsSmall, 'mainContent': !mainController.screenIsSmall}")
+//  div(layout="column", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
+//    div(flex="", layout-fill = "")
+//      div(layout="column", layout-fill = "", layout-align="start center",
+//      ng-class="{'mainTitleSm' : mainController.screenIsSmall, 'mainTitle': !mainController.screenIsSmall}")
+//        h1
+//          | {{mainController.title}}
+//    div(flex="")
+//      div(layout="row", layout-align="center center", layout-sm="column",
+//      ng-class="{'mainTitleSm' : mainController.screenIsSmall, 'mainTitle': !mainController.screenIsSmall}")
+//        h2
+//          | Voet, Voet & Pratt -&nbsp;
+//        h2
+//          | Fundamentals of Biochemistry
+//
+
+table.center-cover()
+  tr
+    td(style="text-align: center; vertical-align: middle;")
+      div(ng-class="{'mainTitleSm' : mainController.screenIsSmall, 'mainTitle': !mainController.screenIsSmall}")
         h1
           | {{mainController.title}}
-    div(flex="")
-      div(layout="row", layout-align="center center", layout-sm="column",
-      ng-class="{'mainTitleSm' : mainController.screenIsSmall, 'mainTitle': !mainController.screenIsSmall}")
         h2
           | Voet, Voet & Pratt -&nbsp;
         h2
           | Fundamentals of Biochemistry
-
-

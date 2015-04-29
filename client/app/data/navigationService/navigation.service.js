@@ -21,7 +21,7 @@
           "Identify the functional groups involved in peptide bond formation",
           "Describe the limitations on polypeptide sequence variation"
         ],
-        animation: "protein_structure_part1",
+        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part1.mp4",
         practiceSession: [{
           PDB: "threonine",
           instructions: "Click an atom in the amino group.",
@@ -41,7 +41,7 @@
           "Explain why the rotational freedom of a polypeptide is restricted",
           "Recognize the hydrogen bonding patterns of secondary structures such as alpha helices and beta sheets"
         ],
-        animation: "protein_structure_part1",
+        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part2.mp4",
         practiceSession: [{
           PDB: "threonine",
           instructions: "Click an atom in the amino group.",
@@ -62,7 +62,7 @@
           "Compare ball-and-stick, spacefilling, and ribbon models of protein structure",
           "Distinguish tertiary and quaternary structure"
         ],
-        animation: "secondary structure",
+        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part3.mp4",
         practiceSession: [{
           PDB: "threonine",
           instructions: "Click an atom in the amino group.",
@@ -83,7 +83,7 @@
           "Identify the key residues in coiled coils and in collagen"
 
         ],
-        animation: "secondary structure",
+        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part4.mp4",
         practiceSession: [{
           PDB: "threonine",
           instructions: "Click an atom in the amino group.",
@@ -105,7 +105,7 @@
           "Describe how changing salt concentration or pH can alter protein structure",
           "Explain why a protein’s structure must be somewhat flexible"
         ],
-        animation: "protein_structure_part1",
+        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part5.mp4",
         practiceSession: [{
           PDB: "threonine",
           instructions: "Click an atom in the amino group.",
@@ -129,6 +129,7 @@
     var notSubSection = -1;
     var notTitle = '';
     var notState = 'main';
+    var notAnimation = '';
     var firstSection = 0;
     var firstSubSection = 0;
 
@@ -160,6 +161,7 @@
       getCurrentTitle: getCurrentTitle,
       getCurrentSectionNumber: getCurrentSectionNumber,
       getCurrentObjectives: getCurrentObjectives,
+      getCurrentAnimation: getCurrentAnimation,
       getPrevious: getPrevious,
       getNext: getNext,
       goNext: goNext,
@@ -180,6 +182,13 @@
       var currentTitle;
       currentTitle = sectionIndex === notSection ? initSectionTitle : getSections()[sectionIndex].name;
       return currentTitle;
+    }
+
+    function getCurrentAnimation() {
+      var sectionIndex = currentSectionState.section;
+      var currentAnimation;
+      currentAnimation = sectionIndex === notSection ? notAnimation : getSections()[sectionIndex].animation;
+      return currentAnimation;
     }
 
     function getPrevious() {

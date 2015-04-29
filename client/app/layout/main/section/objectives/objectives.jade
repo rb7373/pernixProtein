@@ -1,38 +1,70 @@
-div.objectives-container(flex="",
-ng-class="{'mainContent-sm' : objectivesController.screenIsSmall, 'mainContent': !objectivesController.screenIsSmall}")
-  div(layout="row", layout-margin="", layout-fill="", layout-sm="column", layout-align="center start")
-    div.fill-95.coverFadeInLeft(flex="")
-      div(layout="column", layout-align="start center")
-        .mainTitle(layout="column" layout-align="start center")
-          h1
-            | Section {{objectivesController.navigation.getCurrentSectionNumber()}}
-          h2
-            | {{objectivesController.navigation.getCurrentTitle()}}
-    div.fill-95(flex="", layout-padding = "")
-      div(layout="column", layout-align="start center", layout-padding = "")
-        md-whiteframe.md-whiteframe-z2.whiteframe.fadeFrame(layout="column", layout-align="center start",
-        layout-padding = "", ng-animate="'box'")
-          h2.titleGoals
-            | Goals
-          md-content(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()", layout-padding = "",
-          flex = "", layout-align="center center")
-            | * {{objective}}
-          .objective-button.text-center(flex = "", layout-fill="", layout-align="center center",
-          ng-click = 'objectivesController.navigation.goNext()')
-            a
-              span
-                | Watch animation &nbsp;
-              span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
-
-        div.margin-sm(layout="column", layout-align="start center", show-sm)
-          br
-
-
+table(style="width: 100%; height: 100%", ng-class="{'margin-sm' : objectivesController.screenIsSmall}")
+  tr
+    td(style="text-align: center; vertical-align: middle;")
+      .container-fluid
+        .row
+          .col-md-6
+            .mainTitle.coverFadeInLeft(layout="column" layout-align="start center")
+              h1
+                | Section {{objectivesController.navigation.getCurrentSectionNumber()}}
+              h2
+                | {{objectivesController.navigation.getCurrentTitle()}}
+          .col-md-6
+                div(layout="column", layout-align="center center")
+                  md-whiteframe.md-whiteframe-z2.whiteframe.fadeFrame(layout="column", ng-animate="'box'")
+                    div(style = "padding: 20px;")
+                      div.text-left()
+                        h2.titleGoals
+                          | Goals
+                      div.text-left()
+                        div.goals(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()")
+                          span
+                            | * {{objective}}
+                      .objective-button.text-center(ng-click = 'objectivesController.navigation.goNext()')
+                        a
+                          div()
+                            span
+                              | Watch animation &nbsp;
+                            span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
 
 
 
-
-
-
-
-
+//.center-conteiner
+//  div.objectives-container(flex="",
+//  ng-class="{'mainContent-sm' : objectivesController.screenIsSmall, 'mainContent': !objectivesController.screenIsSmall}")
+//    div(layout="row", layout-margin="", layout-fill="", layout-sm="column", layout-align="center start")
+//      div.fill-95.coverFadeInLeft(flex="")
+//        div(layout="column", layout-align="start center")
+//          .mainTitle(layout="column" layout-align="start center")
+//            h1
+//              | Section {{objectivesController.navigation.getCurrentSectionNumber()}}
+//            h2
+//              | {{objectivesController.navigation.getCurrentTitle()}}
+//      div.fill-95(flex="", layout-padding = "")
+//        div(layout="column", layout-align="start center", layout-padding = "")
+//          md-whiteframe.md-whiteframe-z2.whiteframe.fadeFrame(layout="column", layout-align="center start",
+//          layout-padding = "", ng-animate="'box'")
+//            h2.titleGoals
+//              | Goals
+//            md-content(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()", layout-padding = "",
+//            flex = "", layout-align="center center")
+//              | * {{objective}}
+//            .objective-button.text-center(flex = "", layout-fill="", layout-align="center center",
+//            ng-click = 'objectivesController.navigation.goNext()')
+//              a
+//                span
+//                  | Watch animation &nbsp;
+//                span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
+//
+//          div.margin-sm(layout="column", layout-align="start center", show-sm)
+//            br
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

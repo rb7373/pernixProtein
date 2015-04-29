@@ -1,19 +1,5 @@
-//div(flex="",
-//ng-class="{'mainContentAnimation-sm' : animationController.screenIsSmall, 'mainContent': !animation.screenIsSmall}")
-//  div(layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
-//    div(flex="", layout="column", layout-align="start center")
-//      video(width="{{animationController.getWidthVideo()}}", height="{{animationController.getHeightVideo()}}",
-//      controls="", preload="none")
-//        source(src="http://mediaelementjs.com/media/echo-hereweare.mp4#t=10,15", type="video/mp4")
-//        source(src="http://mediaelementjs.com/media/echo-hereweare.webm#t=10,15", type="video/webm")
-//        source(src="http://mediaelementjs.com/media/echo-hereweare.ogv#t=10,15", type="video/ogg")
-
-
-//div.bg-green(flex="", layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
-//div.bg-green(flex="",
-//ng-class="{'mainContentAnimation-sm' : animationController.screenIsSmall, 'mainContent': !animation.screenIsSmall}")
-div
-  .videogular-container(flex="", layout="column", layout-margin="", layout-fill="", layout-align="center center")
+#video-container(flex="", layout="column", layout-margin="", layout-fill="", layout-align="center center")
+  .videogular-container(style = 'padding-bottom: {{animationController.margin}}px;')
     videogular(vg-theme="animationController.config.theme.url",
     vg-player-ready="animationController.onPlayerReady($API)",
     vg-complete = "animationController.videoCompleted($event)")
@@ -30,7 +16,41 @@ div
       vg-overlay-play
       vg-buffering
       vg-poster(vg-url="animationController.config.plugins.poster")
+
+
+//div(flex="",
+//ng-class="{'mainContentAnimation-sm' : animationController.screenIsSmall, 'mainContent': !animation.screenIsSmall}")
+//  div(layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
+//    div(flex="", layout="column", layout-align="start center")
+//      video(width="{{animationController.getWidthVideo()}}", height="{{animationController.getHeightVideo()}}",
+//      controls="", preload="none")
+//        source(src="http://mediaelementjs.com/media/echo-hereweare.mp4#t=10,15", type="video/mp4")
+//        source(src="http://mediaelementjs.com/media/echo-hereweare.webm#t=10,15", type="video/webm")
+//        source(src="http://mediaelementjs.com/media/echo-hereweare.ogv#t=10,15", type="video/ogg")
+
+
+//div.bg-green(flex="", layout="row", layout-margin="", layout-fill="", layout-padding="", layout-sm="column")
+//div.bg-green(flex="",
+//ng-class="{'mainContentAnimation-sm' : animationController.screenIsSmall, 'mainContent': !animation.screenIsSmall}")
+//div(layout="column", layout-align="center center")
+  #video-container.embed-responsive.embed-responsive-16by9(style = 'margin-bottom: 56px')
+    .videogular-container(flex="", layout="column", layout-margin="", layout-fill="", layout-align="center center")
+      videogular(vg-theme="animationController.config.theme.url",
+      vg-player-ready="animationController.onPlayerReady($API)",
+      vg-complete = "animationController.videoCompleted($event)")
+        vg-media(vg-src="animationController.config.sources", vg-tracks="animationController.config.tracks")
+        vg-controls
+          vg-play-pause-button
+          vg-time-display {{ currentTime | date:"mm:ss" }}
+          vg-scrub-bar
+            vg-scrub-bar-current-time
+          vg-volume
+            vg-mute-button
+            vg-volume-bar
+          vg-fullscreen-button
+        vg-overlay-play
+        vg-buffering
+        vg-poster(vg-url="animationController.config.plugins.poster")
+
   //div.margin-sm.bg-blue(layout="column", layout-align="start center", show-sm)
     br
-
-

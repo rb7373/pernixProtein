@@ -20,6 +20,10 @@
 
     vm.previosWidthVideo = 0;
 
+    vm.margin = 56;
+
+
+
     // alert
     var alert;
     vm.items = [1, 2, 3];
@@ -42,8 +46,18 @@
 
     var win = angular.element($window);
     win.bind('resize', function (e) {
+      var footerHeight = angular.element(document.querySelector('#footer'))[0].offsetHeight;
+      var container = angular.element(document.querySelector('#video-container'))[0];
+      if(container){
+        vm.margin = footerHeight;
+      }
       $scope.$apply();
     })
+
+    function changeContainerHeight(container, footerHeight){
+      console.log(footerHeight);
+      console.log(container.offsetHeight);
+    }
 
     function activate() {
       var section = vm.navigation.getCurrentSectionNumber();
@@ -55,6 +69,10 @@
       vm.previosWidthVideo = $window.innerWidth;
 
       vm.screenIsSmall = $mdMedia('sm');
+
+      var footerHeight = angular.element(document.querySelector('#footer'))[0].offsetHeight;
+
+      vm.margin = footerHeight;
 
     }
 
@@ -120,12 +138,9 @@
 
     vm.config = {
       sources: [
-        {src: $sce.trustAsResourceUrl('assets/videos/protein_structure_part1.mp4'), type: 'video/mp4'},
         {
-          src: $sce.trustAsResourceUrl('http://static.videogular.com/assets/videos/videogular.webm'),
-          type: 'video/webm'
-        },
-        {src: $sce.trustAsResourceUrl('http://static.videogular.com/assets/videos/videogular.ogg'), type: 'video/ogg'}
+          src: $sce.trustAsResourceUrl(vm.navigation.getCurrentAnimation()), type: 'video/mp4'
+        }
       ],
       tracks: [
         {

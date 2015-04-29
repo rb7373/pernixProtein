@@ -1,21 +1,3 @@
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
-
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);*/
-
-//@font-face {
-//  font-family: "Open Sans";
-//  src: url("../assets/fonts/open-sans/bold.eot");
-//  src: url("../assets/fonts/open-sans/bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/bold.woff") format("woff"), url("../assets/fonts/open-sans/bold.ttf") format("truetype"), url("../assets/fonts/open-sans/bold.svg#open-sans") format("svg");
-//  font-weight: bold;
-//  font-style: normal;
-//}
-//@font-face {
-//  font-family: "Open Sans Condensed";
-//  src: url("../assets/fonts/open-sans-condensed/bold.eot");
-//  src: url("../assets/fonts/open-sans-condensed/bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans-condensed/bold.woff") format("woff"), url("../assets/fonts/open-sans-condensed/bold.ttf") format("truetype"), url("../assets/fonts/open-sans-condensed/bold.svg#open-sans-condensed") format("svg");
-//  font-weight: bold;
-//  font-style: normal;
-//}
 
 @font-face {
   font-family: open-sans;
@@ -129,6 +111,8 @@
   font-style: normal;
 }
 
+//Remember, delete font from default theme video
+
 @font-face {
   font-family: 'videogular';
   src: url("../assets/fonts/videogular.eot");
@@ -141,9 +125,7 @@
 
 body {
   font-family: 'open-sans', sans-serif;
-  height 100%
-  position relative
-  min-height: 100%;
+  position relative;
   padding: 0;
   margin: 0;
 }
@@ -151,22 +133,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'open-sans-condensed', sans-serif;
 }
-
-.mainContent
-  margin-top 10%
-
-.mainContent-sm
-  margin-top 50px
-
-.mainContentAnimation-sm
-  margin-top 90px
-
-
-//video {
-//  width: 100%;
-//  height: auto;
-//  max-height: 100%;
-//}
 
 $bg-green = #009688
 $bg-blue = #3949ab
@@ -180,20 +146,28 @@ $bg-blue = #3949ab
 .bg-dark
   background-color #222
 
+//.mainContent
+//  margin-top 10%
+//
+//.mainContent-sm
+//  margin-top 50px
+//
+//.mainContentAnimation-sm
+//  margin-top 90px
 
-#content {
-  height: -moz-calc(100% - 100px); /* Firefox */
-  height: -webkit-calc(100% - 100px); /* Chrome, Safari */
-  height: calc(100% - 100px); /* IE9+ and future browsers */
-  background-color: yellow
-}
 
 /* Have to set height explicity on ui-view
 to prevent collapsing during animation*/
 .ui-view-container {
-  position: relative;
-  height: 65px;
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
+
+[ui-view]
+  position relative
+  height 100%
 
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
@@ -219,18 +193,13 @@ to prevent collapsing during animation*/
   opacity: 0;
 }
 
-// VIDEO
-
-.videogular-container {
-  width: 100%;
-  right: 0;
-  left: 0;
-  margin: auto;
+#content {
+  height: -moz-calc(100% - 110px); /* Firefox */
+  height: -webkit-calc(100% - 110px); /* Chrome, Safari */
+  height: calc(100% - 110px); /* IE9+ and future browsers */
+  background-color: yellow
 }
 
-video {
-  width: 100%;
-}
 
 //@media (min-width: 1200px) {
 //  .videogular-container {
