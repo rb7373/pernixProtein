@@ -29,7 +29,7 @@
       if (section === 0) {
         $location.path('/');
       }else{
-        currentSection = scope.navigation.getCurrentSection();
+        currentSection = scope.navigation.getCurrentSection(); // TODO uglify dont'n work
         Start();
       }
 

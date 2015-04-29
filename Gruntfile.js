@@ -124,6 +124,15 @@ module.exports = function (grunt) {
       }
     },
 
+    //uglify: {
+    //  options: {
+    //    mangle: false
+    //  },
+    //  files: {
+    //  }
+    //
+    //},
+
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
@@ -362,6 +371,8 @@ module.exports = function (grunt) {
             'assets/fonts/**/*',
             'assets/videos/**/*',
             'components/**/*',
+            'JSmol/**/*',
+            'practices/**/*',
             'index.html'
           ]
         }, {
