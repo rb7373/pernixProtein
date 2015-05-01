@@ -48,9 +48,12 @@
 
       vm.screenIsSmall = $mdMedia('sm');
 
-      var footerHeight = angular.element(document.querySelector('#footer'))[0].offsetHeight;
+      var footer = angular.element(document.querySelector('#footer'))[0];
 
-      vm.margin = footerHeight;
+      if (footer){
+        var footerHeight = footer.offsetHeight;
+        vm.margin = footerHeight;
+      }
 
     }
 
