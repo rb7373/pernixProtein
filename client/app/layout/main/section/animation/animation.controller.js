@@ -26,23 +26,8 @@
 
     // alert
     var alert;
-    vm.items = [1, 2, 3];
-
-    activate();
 
     ////////////////
-
-    function getWidthVideo() {
-      var width = $window.innerWidth - 50;
-      var height = $window.innerHeight - 80;
-      width = width - 300 > height ? height : width;
-      return width;
-    }
-
-    function getHeightVideo() {
-      var height = $window.innerHeight - 80;
-      return height;
-    }
 
     var win = angular.element($window);
     win.bind('resize', function (e) {
@@ -54,19 +39,12 @@
       $scope.$apply();
     })
 
-    function changeContainerHeight(container, footerHeight){
-      console.log(footerHeight);
-      console.log(container.offsetHeight);
-    }
-
     function activate() {
       var section = vm.navigation.getCurrentSectionNumber();
 
       if (section === 0) {
         $location.path('/');
       }
-
-      vm.previosWidthVideo = $window.innerWidth;
 
       vm.screenIsSmall = $mdMedia('sm');
 
@@ -82,8 +60,6 @@
       vm.screenIsSmall = sm;
     })
 
-    vm.getWidthVideo = getWidthVideo;
-    vm.getHeightVideo = getHeightVideo;
 
     vm.onPlayerReady = function (API) {
       vm.API = API;
@@ -91,15 +67,6 @@
     };
 
     function videoCompleted(event) {
-      //alert = $mdDialog.alert({
-      //  content: 'Test your knowledge in the next section!',
-      //  ok: 'Start'
-      //});
-      //$mdDialog
-      //  .show(alert)
-      //  .finally(function () {
-      //    alert = undefined;
-      //  });
       showDialog(event);
     }
 
@@ -157,6 +124,7 @@
       }
     };
 
+    activate();
 
   }
 })();
