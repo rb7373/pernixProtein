@@ -29,6 +29,7 @@
       if (section === 0) {
         $location.path('/');
       }else{
+        console.log('CALL START ANIMATION DIRECTIVE');
         currentSection = scope.navigation.getCurrentSection(); // TODO uglify dont'n work
         Start();
       }

@@ -135,6 +135,9 @@
 
     var initSectionTitle = 'Introduction';
     var sectionStructure = ['Objectives', 'Animation', 'Practice Session'];
+    var objectivesState = 0;
+    var animationState = 1;
+    var practiceState = 2;
     var sectionStructureStates = ['objectives', 'animation', 'practice'];
 
     var currentState = data[initStateIndex];
@@ -236,6 +239,12 @@
     function setCurrentSectionState(sectionIndex, subSectionIndex) {
       currentSectionState.section = sectionIndex;
       currentSectionState.subSection = subSectionIndex;
+      // TODO: Take care of update jquery variables
+      if (subSectionIndex === practiceState){
+        currentSection = sectionIndex; // TODO uglify dont'n work
+        console.log('CALL START ANIMATION NAVIGATION');
+        Start();
+      }
     }
 
     function getTitleMaxLengthSectionTitle(elemt) {
