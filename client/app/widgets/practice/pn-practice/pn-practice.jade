@@ -20,40 +20,30 @@
                         div.text-left()
                           div#instructions-pn()
                             span
-                              | Hola
+                              | Instructions
                           div#feedback-top-pn()
                             span
-                              | Correct!
+                              | Feedback Top
                           div#feedback-bottom-pn()
                             span
-                              | Excellent
-                        .objective-button.text-left(ng-click = 'objectivesController.navigation.goNext()')
+                              | Feedback bottom
+                        .objective-button.text-left()
                           div(layout="row")
-                            div()
-                              .practice-button.text-center(ng-click = 'objectivesController.navigation.goNext()')
-                                a
+                            #prev-button-pn()
+                              .practice-button.text-center()
+                                a#prev-button(href ="")
                                   div()
                                     span.arrow.glyphicon.glyphicon-triangle-left.practice-button-arrow(aria-hidden='true')
                                     | &nbsp; Prev
 
-                            div(flex="", layout = "row", layout-align="center center")
+                            #center-button-pn(flex="", layout = "row", layout-align="center center")
 
-                            div(layout="row", layout-align="end center")
-                              .practice-button.text-right(ng-click = 'objectivesController.navigation.goNext()')
-                                a
+                            #next-button-pn(layout="row", layout-align="end center")
+                              .practice-button.text-right()
+                                a#next-button(href ="")
                                   div()
                                     span
                                       | Next &nbsp;
                                     span.arrow.glyphicon.glyphicon-triangle-right.practice-button-arrow(aria-hidden='true')
-                    //a
-                      div()
-                        span
-                          | Watch animation &nbsp;
-                        span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
-
-                      div()
-                        span
-                          | Watch animation &nbsp;
-                        span.arrow.glyphicon.glyphicon-triangle-right.objective-button-arrow(aria-hidden='true')
 
   #navigation_instructions

@@ -31,7 +31,7 @@
       }else{
         console.log('CALL START ANIMATION DIRECTIVE');
         currentSection = scope.navigation.getCurrentSection(); // TODO uglify dont'n work
-        Start();
+        startPractice();
       }
 
     }
