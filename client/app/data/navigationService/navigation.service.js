@@ -10,119 +10,11 @@
   /* @ngInject */
   function navigationService($q, $location, $http) {
 
-    ///////////// Data
+    ///////////// dataProtein
 
-    var data = [{
-      id: 1,
-      name: "Protein Structure",
-      sections: [{
-        name: "Polypeptide Chains",
-        objectives: [
-          "Identify the functional groups involved in peptide bond formation",
-          "Describe the limitations on polypeptide sequence variation"
-        ],
-        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part1.mp4",
-        practiceSession: [{
-          PDB: "threonine",
-          instructions: "Click an atom in the amino group.",
-          goal: "amino"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the carboxyl group.",
-          goal: "carboxyl"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the side chain.",
-          goal: "sideChain"
-        }]
-      }, {
-        name: "Secondary Structure",
-        objectives: [
-          "Explain why the rotational freedom of a polypeptide is restricted",
-          "Recognize the hydrogen bonding patterns of secondary structures such as alpha helices and beta sheets"
-        ],
-        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part2.mp4",
-        practiceSession: [{
-          PDB: "threonine",
-          instructions: "Click an atom in the amino group.",
-          goal: "amino"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the carboxyl group.",
-          goal: "carboxyl"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the side chain.",
-          goal: "sideChain"
-        }]
-      }, {
-        name: "Three-dimensional Structure",
-        objectives: [
-          "Locate regular and irregular backbone structures",
-          "Compare ball-and-stick, spacefilling, and ribbon models of protein structure",
-          "Distinguish tertiary and quaternary structure"
-        ],
-        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part3.mp4",
-        practiceSession: [{
-          PDB: "threonine",
-          instructions: "Click an atom in the amino group.",
-          goal: "amino"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the carboxyl group.",
-          goal: "carboxyl"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the side chain.",
-          goal: "sideChain"
-        }]
-      }, {
-        name: "Protein Families",
-        objectives: [
-          "Recognize that different amino acid sequences can form similar structures",
-          "Identify the key residues in coiled coils and in collagen"
+    var dataProtein = [].concat(data);
 
-        ],
-        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part4.mp4",
-        practiceSession: [{
-          PDB: "threonine",
-          instructions: "Click an atom in the amino group.",
-          goal: "amino"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the carboxyl group.",
-          goal: "carboxyl"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the side chain.",
-          goal: "sideChain"
-        }]
-      }, {
-        name: "Protein Stability",
-        objectives: [
-          "Describe protein structure in terms of the hydrophobic effect",
-          "Identify different types of intramolecular forces that help stabilize proteins",
-          "Describe how changing salt concentration or pH can alter protein structure",
-          "Explain why a protein’s structure must be somewhat flexible"
-        ],
-        animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part5.mp4",
-        practiceSession: [{
-          PDB: "threonine",
-          instructions: "Click an atom in the amino group.",
-          goal: "amino"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the carboxyl group.",
-          goal: "carboxyl"
-        }, {
-          PDB: "threonine",
-          instructions: "Click an atom in the side chain.",
-          goal: "sideChain"
-        }]
-      },]
-    }];
-
-    ///////////// Data
+    ///////////// dataProtein
 
     var initStateIndex = 0;
     var notSection = -1;
@@ -140,7 +32,7 @@
     var practiceState = 2;
     var sectionStructureStates = ['objectives', 'animation', 'practice'];
 
-    var currentState = data[initStateIndex];
+    var currentState = dataProtein[initStateIndex];
 
     var titleMaxLength = -1;
     var lastSection = currentState.sections.length - 1;
@@ -178,7 +70,7 @@
     ////////////////
 
     function loadAll() {
-      return $q.when(data);
+      return $q.when(dataProtein);
     }
 
     function getCurrentTitle() {
