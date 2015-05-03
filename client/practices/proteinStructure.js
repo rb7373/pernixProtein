@@ -8,7 +8,7 @@ var data = {
         "Identify the functional groups involved in peptide bond formation",
         "Describe the limitations on polypeptide sequence variation"
       ],
-      animation: "protein_structure_part1",
+      animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part1.mp4",
       practiceSession: [
         {
           PDB: "threonine",
@@ -60,7 +60,7 @@ var data = {
         "Explain why the rotational freedom of a polypeptide is restricted",
         "Recognize the hydrogen bonding patterns of secondary structures such as alpha helices and beta sheets"
       ],
-      animation: "protein_structure_part2",
+      animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part2.mp4",
       practiceSession: [
         {
           PDB: "helix",
@@ -148,7 +148,7 @@ var data = {
         "Compare ball-and-stick, spacefilling, and ribbon models of protein structure",
         "Distinguish tertiary and quaternary structure"
       ],
-      animation: "secondary structure",
+      animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part3.mp4",
       practiceSession: [
         {
           PDB: "p2AWF",
@@ -303,7 +303,7 @@ var data = {
         "Identify the key residues in coiled coils and in collagen"
 
       ],
-      animation: "secondary structure",
+      animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part4.mp4",
       practiceSession: [
         {
           PDB: "none",
@@ -340,7 +340,7 @@ var data = {
         "Describe how changing salt concentration or pH can alter protein structure",
         "Explain why a protein’s structure must be somewhat flexible"
       ],
-      animation: "protein_structure_part1",
+      animation: "http://dynamoidapps.com/Wiley/Voet/video/protein_structure_part5.mp4",
       practiceSession: [
         {
           PDB: "p2PAH",
