@@ -20,7 +20,7 @@ table(style="width: 100%; height: 100%", ng-class="{'margin-sm' : objectivesCont
                         div.text-left()
                           div.goals(ng-repeat="objective in objectivesController.navigation.getCurrentObjectives()")
                             span
-                              | * {{objective}}
+                              | &#8226; {{objective}}
                         .objective-button.text-center(ng-click = 'objectivesController.navigation.goNext()')
                           a
                             div()

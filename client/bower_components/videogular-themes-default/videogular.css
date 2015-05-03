@@ -376,8 +376,8 @@ videogular, [videogular] {
     width: 50px;
     height: 50px;
     margin: 0 auto;
-    -moz-animation: spin .5s infinite linear;
-    -webkit-animation: spin .5s infinite linear; }
+    -moz-animation: spin 1.5s infinite linear;
+    -webkit-animation: spin 1.5s infinite linear; }
   videogular vg-buffering .loadingSpinner .stop, [videogular] vg-buffering .loadingSpinner .stop {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused; }
