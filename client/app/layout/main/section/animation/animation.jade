@@ -1,0 +1,18 @@
+#video-container(flex="", layout="column", layout-margin="", layout-fill="", layout-align="center center")
+  .videogular-container(style = 'padding-bottom: {{animationController.margin}}px;')
+    videogular(vg-theme="animationController.config.theme.url",
+    vg-player-ready="animationController.onPlayerReady($API)",
+    vg-complete = "animationController.videoCompleted($event)")
+      vg-media(vg-src="animationController.config.sources", vg-tracks="animationController.config.tracks")
+      vg-controls
+        vg-play-pause-button
+        vg-time-display {{ currentTime | date:"mm:ss" }}
+        vg-scrub-bar
+          vg-scrub-bar-current-time
+        vg-volume
+          vg-mute-button
+          vg-volume-bar
+        vg-fullscreen-button
+      vg-overlay-play
+      vg-buffering
+      vg-poster(vg-url="animationController.config.plugins.poster")

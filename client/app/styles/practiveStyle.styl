@@ -1,0 +1,233 @@
+////
+
+
+.title{
+  text-align: center;
+}
+
+.content{
+  width:100%;
+  right:0;
+  left:0;
+  margin: auto;
+}
+
+video{
+  width:100%;
+}
+
+#practice_session{
+  background-image: url(../components/images/background.jpg);
+  background-size: cover;
+  position: relative;
+  width: 80%;
+  min-width: 650px;
+  height: 400px;
+  left:0;
+  right:0;
+  margin: auto;
+}
+
+#loading {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin: auto;
+}
+
+.button{
+  z-index: 20;
+}
+
+.labels{
+  padding:20px;
+  font-family: "Open Sans Condensed";
+  font-size: 2em;
+  text-align: center;
+
+  z-index: 10;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.17);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.17);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.17);
+}
+
+#instructions{
+  background: white;
+  position: absolute;
+  width:150px;
+  top:20px;
+  left:20px;
+}
+
+#nextButton, #retryButton, .button{
+  position: absolute;
+  right:0;
+  bottom:0;
+  z-index: 30;
+  cursor: pointer;
+  background: white;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+#nextButton:hover, #retryButton:hover, .button:hover{
+  background: #b8d2db;
+}
+
+#nextButton:active, #retryButton:active, .button:active{
+  margin-top: 12px;
+}
+
+.button{
+  position: relative;
+
+  z-index: 30;
+  cursor: pointer;
+  background: #666;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 150px;
+  color:white;
+
+}
+
+.button:hover{
+  background: #b8d2db;
+  color:black;
+}
+
+.button:active{
+  margin-top: 12px;
+}
+
+
+
+#message{
+
+  font-size: 24px;
+  max-width: 160px;
+  position: absolute;
+  top:100px;
+  left:75%;
+  background: white;
+
+
+}
+
+#message p{
+  padding:0;
+  margin: 0;
+}
+
+#navigation_instructions{
+  position: relative;
+  width: 80%;
+  min-width: 650px;
+  left:0;
+  right:0;
+  margin: auto;
+  text-align: left;
+}
+
+.contentImage{
+  max-width: 70%;
+  margin-left: 30%;
+  margin-top: 50px;
+}
+
+
+#multiple_choice{
+  text-align: left;
+  font-size: 16px;
+  max-width: 250px;
+  position: absolute;
+  top:15px;
+  left:15px;
+  background: white;
+  padding: 20px 10px 20px 20px;
+  z-index:10;
+}
+
+#multiple_choice h4{
+  font-weight: bold;
+  text-align: left;
+  padding:0;
+  margin: 0 0 15px 0;
+
+}
+
+.answer{
+  cursor: pointer;
+  background: no-repeat left;
+  background-image: url(../components/images/GUI_answer_empty.png);
+  background-size: 25px;
+  padding: 5px 10px 5px 45px;
+  margin-bottom: 15px;
+}
+
+.answer:hover{
+  background: no-repeat left;
+  background-image: url(../components/images/GUI_answer_hover.png);
+  background-size: 25px;
+}
+
+.answer:active{
+  background: no-repeat left;
+  background-image: url(../components/images/GUI_answer_filled.png);
+  background-size: 25px;
+}
+
+.answer-filled{
+  background: no-repeat left;
+  background-image: url(../components/images/GUI_answer_filled.png);
+  background-size: 25px;
+}
+
+.answer-filled:hover{
+  background: no-repeat left;
+  background-image: url(../components/images/GUI_answer_filled.png);
+  background-size: 25px;
+}
+
+#submit{
+
+}
+
+#feedback{
+  font-size: 21px;
+  padding: 10px;
+}
+
+.input{
+  font-size: 18px;
+  width:50px;
+  height: 30px;
+  margin: 0 10px 15px 10px;
+  /*    background: #ccc;*/
+  border: 2px solid gray;
+  padding:5px 15px;
+}
+
+#drag{
+
+  font-size: 24px;
+  max-width: 160px;
+  position: absolute;
+  top:250px;
+  left:20px;
+  background: white;
+
+
+}
+
+#drag p{
+  padding:0;
+  margin: 0;
+}

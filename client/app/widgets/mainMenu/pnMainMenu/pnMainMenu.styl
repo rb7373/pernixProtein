@@ -1,10 +1,68 @@
-.menu {
-  margin: 0 auto;
-  padding: 0;
+//variables
+$mainColorMenuDark = #222
+$mainColorMenuLight = white
+$subMenuHover = #EBEBEB
+$subMenuBorder = #DEDEDE
+$subMenuMenuLight = white
+
+.menu
+  margin-top 20px
+  margin-right 20px
+  margin-bottom auto
+  margin-left 20px
+  padding 0
+  position absolute
+  z-index 2030
+  &:hover
+    cursor hand
+
+
+.menuShadow {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.footerTitleMenu {
+  font-size 14px
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.footerSubTitleMenu {
+  font-size 12px
+  margin-left: 20px;
+}
+
+.titleMenu {
+  font-size 16px
+  margin-right: 11px;
+  margin-left: 18px;
+  font-weight: 700;
+}
+
+.subTitleMenu {
+  font-size 14px
+  margin-left: 41px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.subTitleItemMenu {
+  font-family: 'open-sans';
+  margin-left: 59px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .menu li {
   list-style: none;
+}
+
+.menu li span {
+  vertical-align: top;
+  text-decoration: none;
+  text-align: center;
 }
 
 .menu li a {
@@ -12,10 +70,10 @@
   margin-top: 1px;
   padding: 14px 10px;
   width: 100%;
-  background: #222;
+  background: $mainColorMenuDark;
   text-decoration: none;
   text-align: left;
-  vertical-align: middle;
+  vertical-align: top;
   color: #fff;
   overflow: hidden;
   -webkit-transition-property: background;
@@ -27,15 +85,17 @@
 }
 
 .menu > li:first-child a {
-  background-color: #fff;
+  background-color: $mainColorMenuLight;
   margin-top: 0;
   color: #000;
   border: solid 1px;
   margin-bottom: -1px;
+  margin-right: 14px;
+  padding-bottom: 10px;
 }
 
 .menu > li:last-child a {
-  background-color: white;
+  background-color: $mainColorMenuLight;
   margin-top: 0;
   color: black;
   border: solid 1px;
@@ -54,7 +114,7 @@
   border-right solid 1px
   padding: 0 10px;
   height: 0;
-  background: #9E9E9E; //submenu2
+  background: $subMenuMenuLight;
   color: #222;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.5s;
@@ -64,16 +124,10 @@
   transition-timing-function: ease-out;
 }
 
-.menu li li:last-child a {
-  border-bottom solid 0px
-}
-
-
-
-.menu > li:hover li a {
+.menu > li.active li a {
   display: table;
-  margin-top: 1px;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 14px;
   width: 100%;
   height: 1em;
   -webkit-transition-property: all;
@@ -82,10 +136,19 @@
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+  border-bottom solid 1px
+  border-left solid 1px
+  border-right solid 1px
+  border-color $subMenuBorder
+}
+
+.menu li li:last-child a {
+  border-bottom solid 0px
 }
 
 .subMenu a:hover {
-  background: white; // CUSTOM
+  background: $subMenuHover;
+  color: $mainColorMenuDark
   -webkit-transition-property: background;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-out;
@@ -97,11 +160,20 @@
 //Animations top main
 
 /* when hiding the picture */
-.ng-hide-add {
+.fadeMenu.ng-hide-add {
   animation: 0.5s fadeOut ease;
 }
 
 /* when showing the picture */
-.ng-hide-remove {
+.fadeMenu.ng-hide-remove {
   animation: 0.5s fadeIn ease;
 }
+
+a {
+  outline: medium none !important;
+}
+
+a:active, a:focus {
+  outline: none;
+}
+

@@ -1,0 +1,49 @@
+.content(style = 'padding-bottom: {{practiceController.margin}}px;')
+  #practice_session
+    img#loading(src="components/images/ajax-loader.gif")
+    #nextButton.labels Next
+    #retryButton.labels Retry
+    #instructions.labels
+    #message.labels
+    #multiple_choice
+    #drag.labels
+    #popUps
+      table.center-cover()
+        tr
+          td(style="text-align: center; vertical-align: middle;")
+            .container-fluid
+              .row
+                .pull-right.popUps-container
+                  div(layout="column", layout-align="center center")
+                    md-whiteframe.md-whiteframe-z2.whiteframe.fadeFrame(layout="column", ng-animate="'box'")
+                      div()
+                        div.text-left()
+                          div#instructions-pn()
+                            span
+                              | Instructions
+                          div#feedback-top-pn()
+                            span
+                              | Feedback Top
+                          div#feedback-bottom-pn()
+                            span
+                              | Feedback bottom
+                        .objective-button.text-left()
+                          div(layout="row")
+                            #prev-button-pn()
+                              .practice-button.text-center()
+                                a#prev-button(href ="")
+                                  div()
+                                    span.arrow.glyphicon.glyphicon-triangle-left.practice-button-arrow(aria-hidden='true')
+                                    | &nbsp; Prev
+
+                            #center-button-pn(flex="", layout = "row", layout-align="center center")
+
+                            #next-button-pn(layout="row", layout-align="end center")
+                              .practice-button.text-right()
+                                a#next-button(href ="")
+                                  div()
+                                    span
+                                      | Next &nbsp;
+                                    span.arrow.glyphicon.glyphicon-triangle-right.practice-button-arrow(aria-hidden='true')
+
+  #navigation_instructions

@@ -1,0 +1,419 @@
+HEADER    GLYCOPROTEIN                            19-AUG-91   2CLG              
+TITLE     AN ENERGETIC EVALUATION OF A "SMITH" COLLAGEN MICROFIBRIL             
+TITLE    2 MODEL                                                                
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: COLLAGEN;                                                  
+COMPND   3 CHAIN: A, B, C;                                                      
+COMPND   4 ENGINEERED: YES                                                      
+SOURCE    MOL_ID: 1                                                             
+KEYWDS    GLYCOPROTEIN                                                          
+EXPDTA    THEORETICAL MODEL                                                     
+AUTHOR    J.M.CHEN                                                              
+REVDAT   2   01-APR-03 2CLG    1       JRNL                                     
+REVDAT   1   31-JAN-94 2CLG    0                                                
+JRNL        AUTH   J.M.CHEN,C.E.KUNG,S.H.FEAIRHELLER,E.M.BROWN                  
+JRNL        TITL   AN ENERGETIC EVALUATION OF A "SMITH" COLLAGEN                
+JRNL        TITL 2 MICROFIBRIL MODEL.                                           
+JRNL        REF    J.PROTEIN CHEM.               V.  10   535 1991              
+JRNL        REFN   ASTM JPCHD2  UK ISSN 0277-8033                               
+REMARK   1                                                                      
+REMARK   2                                                                      
+REMARK   2 RESOLUTION. NOT APPLICABLE.                                          
+REMARK   3                                                                      
+REMARK   3 REFINEMENT.                                                          
+REMARK   3   PROGRAM     : NULL                                                 
+REMARK   3   AUTHORS     : NULL                                                 
+REMARK   3                                                                      
+REMARK   3  OTHER REFINEMENT REMARKS: NULL                                      
+REMARK   4                                                                      
+REMARK   4 2CLG COMPLIES WITH FORMAT V. 3.0, 1-DEC-2006                         
+REMARK   4                                                                      
+REMARK   4 THIS IS THE REMEDIATED VERSION OF THIS PDB ENTRY.                    
+REMARK   4 REMEDIATED DATA FILE REVISION 3.100 (2007-05-29)                     
+REMARK 220                                                                      
+REMARK 220 EXPERIMENTAL DETAILS                                                 
+REMARK 220  EXPERIMENT TYPE                : THEORETICAL MODELLING              
+REMARK 220                                                                      
+REMARK 220 REMARK: NULL                                                         
+REMARK 225                                                                      
+REMARK 225 THEORETICAL MODEL                                                    
+REMARK 225 THE COORDINATES IN THIS ENTRY REPRESENT A MODEL STRUCTURE.           
+REMARK 225 PROTEIN DATA BANK CONVENTIONS REQUIRE THAT CRYST1 AND                
+REMARK 225 SCALE RECORDS BE INCLUDED, BUT THE VALUES ON THESE                   
+REMARK 225 RECORDS ARE MEANINGLESS.                                             
+DBREF  2CLG A    1    35  UNP    P25050   COLL_HSVS7      18     52             
+DBREF  2CLG B    1    35  UNP    P25050   COLL_HSVS7      18     52             
+DBREF  2CLG C    1    35  UNP    P25050   COLL_HSVS7      18     52             
+SEQADV 2CLG HYP A    3  UNP  P25050    GLN    20 CONFLICT                       
+SEQADV 2CLG HYP A    6  UNP  P25050    PRO    23 CONFLICT                       
+SEQADV 2CLG HYP A    9  UNP  P25050    PRO    26 CONFLICT                       
+SEQADV 2CLG HYP A   12  UNP  P25050    GLN    29 CONFLICT                       
+SEQADV 2CLG HYP A   15  UNP  P25050    PRO    32 CONFLICT                       
+SEQADV 2CLG HYP A   18  UNP  P25050    GLN    35 CONFLICT                       
+SEQADV 2CLG HYP A   21  UNP  P25050    PRO    38 CONFLICT                       
+SEQADV 2CLG HYP A   24  UNP  P25050    GLN    41 CONFLICT                       
+SEQADV 2CLG HYP A   27  UNP  P25050    PRO    44 CONFLICT                       
+SEQADV 2CLG HYP A   30  UNP  P25050    GLN    47 CONFLICT                       
+SEQADV 2CLG HYP A   33  UNP  P25050    PRO    50 CONFLICT                       
+SEQADV 2CLG HYP B    3  UNP  P25050    GLN    20 CONFLICT                       
+SEQADV 2CLG HYP B    6  UNP  P25050    PRO    23 CONFLICT                       
+SEQADV 2CLG HYP B    9  UNP  P25050    PRO    26 CONFLICT                       
+SEQADV 2CLG HYP B   12  UNP  P25050    GLN    29 CONFLICT                       
+SEQADV 2CLG HYP B   15  UNP  P25050    PRO    32 CONFLICT                       
+SEQADV 2CLG HYP B   18  UNP  P25050    GLN    35 CONFLICT                       
+SEQADV 2CLG HYP B   21  UNP  P25050    PRO    38 CONFLICT                       
+SEQADV 2CLG HYP B   24  UNP  P25050    GLN    41 CONFLICT                       
+SEQADV 2CLG HYP B   27  UNP  P25050    PRO    44 CONFLICT                       
+SEQADV 2CLG HYP B   30  UNP  P25050    GLN    47 CONFLICT                       
+SEQADV 2CLG HYP B   33  UNP  P25050    PRO    50 CONFLICT                       
+SEQADV 2CLG HYP C    3  UNP  P25050    GLN    20 CONFLICT                       
+SEQADV 2CLG HYP C    6  UNP  P25050    PRO    23 CONFLICT                       
+SEQADV 2CLG HYP C    9  UNP  P25050    PRO    26 CONFLICT                       
+SEQADV 2CLG HYP C   12  UNP  P25050    GLN    29 CONFLICT                       
+SEQADV 2CLG HYP C   15  UNP  P25050    PRO    32 CONFLICT                       
+SEQADV 2CLG HYP C   18  UNP  P25050    GLN    35 CONFLICT                       
+SEQADV 2CLG HYP C   21  UNP  P25050    PRO    38 CONFLICT                       
+SEQADV 2CLG HYP C   24  UNP  P25050    GLN    41 CONFLICT                       
+SEQADV 2CLG HYP C   27  UNP  P25050    PRO    44 CONFLICT                       
+SEQADV 2CLG HYP C   30  UNP  P25050    GLN    47 CONFLICT                       
+SEQADV 2CLG HYP C   33  UNP  P25050    PRO    50 CONFLICT                       
+SEQRES   1 A   38  ACE GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP          
+SEQRES   2 A   38  GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY          
+SEQRES   3 A   38  PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP NME              
+SEQRES   1 B   38  ACE GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP          
+SEQRES   2 B   38  GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY          
+SEQRES   3 B   38  PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP NME              
+SEQRES   1 C   38  ACE GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP          
+SEQRES   2 C   38  GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP GLY          
+SEQRES   3 C   38  PRO HYP GLY PRO HYP GLY PRO HYP GLY PRO HYP NME              
+MODRES 2CLG HYP A    3  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A    6  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A    9  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   12  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   15  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   18  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   21  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   24  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   27  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   30  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   33  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP A   36  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG NME A   37       METHYLAMINE                                        
+MODRES 2CLG HYP B    3  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B    6  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B    9  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   12  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   15  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   18  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   21  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   24  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   27  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   30  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   33  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP B   36  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG NME B   37       METHYLAMINE                                        
+MODRES 2CLG HYP C    3  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C    6  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C    9  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   12  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   15  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   18  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   21  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   24  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   27  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   30  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   33  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG HYP C   36  PRO  4-HYDROXYPROLINE                                   
+MODRES 2CLG NME C   37       METHYLAMINE                                        
+HET    ACE  A   0       3                                                       
+HET    HYP  A   3       9                                                       
+HET    HYP  A   6       9                                                       
+HET    HYP  A   9       9                                                       
+HET    HYP  A  12       9                                                       
+HET    HYP  A  15       9                                                       
+HET    HYP  A  18       9                                                       
+HET    HYP  A  21       9                                                       
+HET    HYP  A  24       9                                                       
+HET    HYP  A  27       9                                                       
+HET    HYP  A  30       9                                                       
+HET    HYP  A  33       9                                                       
+HET    HYP  A  36       9                                                       
+HET    NME  A  37       3                                                       
+HET    ACE  B   0       3                                                       
+HET    HYP  B   3       9                                                       
+HET    HYP  B   6       9                                                       
+HET    HYP  B   9       9                                                       
+HET    HYP  B  12       9                                                       
+HET    HYP  B  15       9                                                       
+HET    HYP  B  18       9                                                       
+HET    HYP  B  21       9                                                       
+HET    HYP  B  24       9                                                       
+HET    HYP  B  27       9                                                       
+HET    HYP  B  30       9                                                       
+HET    HYP  B  33       9                                                       
+HET    HYP  B  36       9                                                       
+HET    NME  B  37       3                                                       
+HET    ACE  C   0       3                                                       
+HET    HYP  C   3       9                                                       
+HET    HYP  C   6       9                                                       
+HET    HYP  C   9       9                                                       
+HET    HYP  C  12       9                                                       
+HET    HYP  C  15       9                                                       
+HET    HYP  C  18       9                                                       
+HET    HYP  C  21       9                                                       
+HET    HYP  C  24       9                                                       
+HET    HYP  C  27       9                                                       
+HET    HYP  C  30       9                                                       
+HET    HYP  C  33       9                                                       
+HET    HYP  C  36       9                                                       
+HET    NME  C  37       3                                                       
+HETNAM     ACE ACETYL GROUP                                                     
+HETNAM     HYP 4-HYDROXYPROLINE                                                 
+HETNAM     NME METHYLAMINE                                                      
+HETSYN     HYP HYDROXYPROLINE                                                   
+FORMUL   1  ACE    3(C2 H4 O)                                                   
+FORMUL   1  HYP    36(C5 H9 N O3)                                               
+FORMUL   1  NME    3(C H5 N)                                                    
+CRYST1    1.000    1.000    1.000  90.00  90.00  90.00 P 1           1          
+ORIGX1      1.000000  0.000000  0.000000        0.00000                         
+ORIGX2      0.000000  1.000000  0.000000        0.00000                         
+ORIGX3      0.000000  0.000000  1.000000        0.00000                         
+SCALE1      1.000000  0.000000  0.000000        0.00000                         
+SCALE2      0.000000  1.000000  0.000000        0.00000                         
+SCALE3      0.000000  0.000000  1.000000        0.00000                         
+ATOM      1  N   GLY A  25      -0.278  20.093  -1.780  1.00  0.00           N
+ATOM      2  CA  GLY A  25      -0.897  20.852  -2.850  1.00  0.00           C
+ATOM      3  C   GLY A  25       0.002  22.000  -3.326  1.00  0.00           C
+ATOM      4  O   GLY A  25       1.018  22.307  -2.699  1.00  0.00           O
+ATOM      5  N   PRO A  26      -0.360  22.653  -4.439  1.00  0.00           N
+ATOM      6  CA  PRO A  26       0.378  23.794  -4.977  1.00  0.00           C
+ATOM      7  C   PRO A  26       0.161  25.015  -4.071  1.00  0.00           C
+ATOM      8  O   PRO A  26      -0.637  24.965  -3.134  1.00  0.00           O
+ATOM      9  CB  PRO A  26      -0.265  23.981  -6.355  1.00  0.00           C
+ATOM     10  CG  PRO A  26      -1.715  23.658  -6.066  1.00  0.00           C
+ATOM     11  CD  PRO A  26      -1.538  22.383  -5.257  1.00  0.00           C
+HETATM   12  N   HYP A  27       0.858  26.129  -4.322  1.00  0.00           N
+HETATM   13  CA  HYP A  27       0.660  27.356  -3.560  1.00  0.00           C
+HETATM   14  C   HYP A  27      -0.756  27.906  -3.773  1.00  0.00           C
+HETATM   15  O   HYP A  27      -1.488  27.489  -4.671  1.00  0.00           O
+HETATM   16  CB  HYP A  27       1.769  28.270  -4.097  1.00  0.00           C
+HETATM   17  CG  HYP A  27       1.879  27.852  -5.554  1.00  0.00           C
+HETATM   18  CD  HYP A  27       1.876  26.340  -5.345  1.00  0.00           C
+HETATM   19  OD1 HYP A  27       0.699  28.168  -6.292  1.00  0.00           O
+ATOM     20  N   GLY A  28      -1.151  28.846  -2.919  1.00  0.00           N
+ATOM     21  CA  GLY A  28      -2.433  29.511  -3.041  1.00  0.00           C
+ATOM     22  C   GLY A  28      -2.359  30.675  -4.032  1.00  0.00           C
+ATOM     23  O   GLY A  28      -1.273  31.028  -4.500  1.00  0.00           O
+ATOM     24  N   PRO A  29      -3.502  31.301  -4.347  1.00  0.00           N
+ATOM     25  CA  PRO A  29      -3.541  32.532  -5.139  1.00  0.00           C
+ATOM     26  C   PRO A  29      -2.920  33.643  -4.280  1.00  0.00           C
+ATOM     27  O   PRO A  29      -2.800  33.476  -3.065  1.00  0.00           O
+ATOM     28  CB  PRO A  29      -5.042  32.741  -5.357  1.00  0.00           C
+ATOM     29  CG  PRO A  29      -5.618  32.258  -4.041  1.00  0.00           C
+ATOM     30  CD  PRO A  29      -4.839  30.963  -3.872  1.00  0.00           C
+HETATM   31  N   HYP A  30      -2.496  34.770  -4.862  1.00  0.00           N
+HETATM   32  CA  HYP A  30      -1.857  35.832  -4.094  1.00  0.00           C
+HETATM   33  C   HYP A  30      -2.888  36.541  -3.213  1.00  0.00           C
+HETATM   34  O   HYP A  30      -4.046  36.134  -3.115  1.00  0.00           O
+HETATM   35  CB  HYP A  30      -1.316  36.749  -5.201  1.00  0.00           C
+HETATM   36  CG  HYP A  30      -2.403  36.673  -6.260  1.00  0.00           C
+HETATM   37  CD  HYP A  30      -2.556  35.148  -6.272  1.00  0.00           C
+HETATM   38  OD1 HYP A  30      -3.608  37.285  -5.788  1.00  0.00           O
+ATOM     39  N   GLY A  31      -2.463  37.637  -2.594  1.00  0.00           N
+ATOM     40  CA  GLY A  31      -3.386  38.544  -1.959  1.00  0.00           C
+ATOM     41  C   GLY A  31      -4.066  39.396  -3.032  1.00  0.00           C
+ATOM     42  O   GLY A  31      -3.576  39.485  -4.166  1.00  0.00           O
+ATOM     43  N   PRO A  32      -5.193  40.031  -2.695  1.00  0.00           N
+ATOM     44  CA  PRO A  32      -5.853  40.992  -3.570  1.00  0.00           C
+ATOM     45  C   PRO A  32      -5.065  42.308  -3.507  1.00  0.00           C
+ATOM     46  O   PRO A  32      -4.237  42.491  -2.611  1.00  0.00           O
+ATOM     47  CB  PRO A  32      -7.224  41.143  -2.905  1.00  0.00           C
+ATOM     48  CG  PRO A  32      -6.854  41.112  -1.435  1.00  0.00           C
+ATOM     49  CD  PRO A  32      -5.907  39.921  -1.426  1.00  0.00           C
+HETATM   50  N   HYP A  33      -5.308  43.236  -4.439  1.00  0.00           N
+HETATM   51  CA  HYP A  33      -4.733  44.576  -4.416  1.00  0.00           C
+HETATM   52  C   HYP A  33      -4.970  45.280  -3.080  1.00  0.00           C
+HETATM   53  O   HYP A  33      -5.993  45.061  -2.428  1.00  0.00           O
+HETATM   54  CB  HYP A  33      -5.464  45.306  -5.541  1.00  0.00           C
+HETATM   55  CG  HYP A  33      -5.651  44.185  -6.540  1.00  0.00           C
+HETATM   56  CD  HYP A  33      -6.159  43.092  -5.609  1.00  0.00           C
+HETATM   57  OD1 HYP A  33      -6.298  44.339  -7.800  1.00  0.00           O
+ATOM     58  N   GLY A  34      -4.022  46.119  -2.669  1.00  0.00           N
+ATOM     59  CA  GLY A  34      -4.135  46.882  -1.442  1.00  0.00           C
+ATOM     60  C   GLY A  34      -5.189  47.983  -1.556  1.00  0.00           C
+ATOM     61  O   GLY A  34      -5.606  48.340  -2.660  1.00  0.00           O
+ATOM     62  N   PRO A  35      -5.627  48.549  -0.426  1.00  0.00           N
+ATOM     63  CA  PRO A  35      -6.571  49.660  -0.420  1.00  0.00           C
+ATOM     64  C   PRO A  35      -5.869  50.903  -0.979  1.00  0.00           C
+ATOM     65  O   PRO A  35      -4.646  51.029  -0.883  1.00  0.00           O
+ATOM     66  CB  PRO A  35      -6.923  49.800   1.062  1.00  0.00           C
+ATOM     67  CG  PRO A  35      -5.605  49.464   1.727  1.00  0.00           C
+ATOM     68  CD  PRO A  35      -5.216  48.225   0.935  1.00  0.00           C
+HETATM   69  N   HYP A  36      -6.627  51.827  -1.580  1.00  0.00           N
+HETATM   70  CA  HYP A  36      -6.103  53.067  -2.154  1.00  0.00           C
+HETATM   71  C   HYP A  36      -5.439  53.916  -1.067  1.00  0.00           C
+HETATM   72  O   HYP A  36      -5.850  53.862   0.094  1.00  0.00           O
+HETATM   73  CB  HYP A  36      -7.361  53.707  -2.759  1.00  0.00           C
+HETATM   74  CG  HYP A  36      -8.477  53.237  -1.834  1.00  0.00           C
+HETATM   75  CD  HYP A  36      -8.071  51.771  -1.766  1.00  0.00           C
+HETATM   76  OD1 HYP A  36      -8.462  53.776  -0.509  1.00  0.00           O
+HETATM   77  O1  NME A  37      -4.488  54.625  -1.424  1.00  0.00           O
+TER      78      NME A  37
+ATOM     79  N   GLY B  28      -1.119  22.989   0.413  1.00  0.00           N
+ATOM     80  CA  GLY B  28      -0.027  23.727  -0.195  1.00  0.00           C
+ATOM     81  C   GLY B  28       0.294  25.029   0.548  1.00  0.00           C
+ATOM     82  O   GLY B  28      -0.415  25.422   1.478  1.00  0.00           O
+ATOM     83  N   PRO B  29       1.369  25.721   0.150  1.00  0.00           N
+ATOM     84  CA  PRO B  29       1.803  26.965   0.780  1.00  0.00           C
+ATOM     85  C   PRO B  29       0.893  28.126   0.362  1.00  0.00           C
+ATOM     86  O   PRO B  29       0.439  28.188  -0.781  1.00  0.00           O
+ATOM     87  CB  PRO B  29       3.224  27.135   0.238  1.00  0.00           C
+ATOM     88  CG  PRO B  29       3.070  26.636  -1.185  1.00  0.00           C
+ATOM     89  CD  PRO B  29       2.280  25.360  -0.932  1.00  0.00           C
+HETATM   90  N   HYP B  30       0.613  29.058   1.281  1.00  0.00           N
+HETATM   91  CA  HYP B  30      -0.163  30.266   1.019  1.00  0.00           C
+HETATM   92  C   HYP B  30       0.351  31.064  -0.178  1.00  0.00           C
+HETATM   93  O   HYP B  30       1.543  31.036  -0.485  1.00  0.00           O
+HETATM   94  CB  HYP B  30      -0.015  31.077   2.303  1.00  0.00           C
+HETATM   95  CG  HYP B  30       0.015  29.976   3.339  1.00  0.00           C
+HETATM   96  CD  HYP B  30       1.006  29.027   2.681  1.00  0.00           C
+HETATM   97  OD1 HYP B  30       0.135  30.195   4.742  1.00  0.00           O
+ATOM     98  N   GLY B  31      -0.552  31.775  -0.854  1.00  0.00           N
+ATOM     99  CA  GLY B  31      -0.189  32.620  -1.978  1.00  0.00           C
+ATOM    100  C   GLY B  31       0.641  33.834  -1.539  1.00  0.00           C
+ATOM    101  O   GLY B  31       0.668  34.183  -0.357  1.00  0.00           O
+ATOM    102  N   PRO B  32       1.333  34.493  -2.478  1.00  0.00           N
+ATOM    103  CA  PRO B  32       2.169  35.659  -2.194  1.00  0.00           C
+ATOM    104  C   PRO B  32       1.297  36.895  -1.940  1.00  0.00           C
+ATOM    105  O   PRO B  32       0.127  36.918  -2.318  1.00  0.00           O
+ATOM    106  CB  PRO B  32       2.980  35.806  -3.484  1.00  0.00           C
+ATOM    107  CG  PRO B  32       1.952  35.436  -4.534  1.00  0.00           C
+ATOM    108  CD  PRO B  32       1.377  34.178  -3.902  1.00  0.00           C
+HETATM  109  N   HYP B  33       1.847  37.934  -1.300  1.00  0.00           N
+HETATM  110  CA  HYP B  33       1.166  39.200  -1.046  1.00  0.00           C
+HETATM  111  C   HYP B  33       0.559  39.835  -2.299  1.00  0.00           C
+HETATM  112  O   HYP B  33       1.077  39.670  -3.404  1.00  0.00           O
+HETATM  113  CB  HYP B  33       2.258  40.092  -0.462  1.00  0.00           C
+HETATM  114  CG  HYP B  33       3.068  39.082   0.321  1.00  0.00           C
+HETATM  115  CD  HYP B  33       3.180  37.977  -0.720  1.00  0.00           C
+HETATM  116  OD1 HYP B  33       4.230  39.405   1.079  1.00  0.00           O
+ATOM    117  N   GLY B  34      -0.544  40.559  -2.121  1.00  0.00           N
+ATOM    118  CA  GLY B  34      -1.213  41.264  -3.196  1.00  0.00           C
+ATOM    119  C   GLY B  34      -0.442  42.521  -3.609  1.00  0.00           C
+ATOM    120  O   GLY B  34       0.424  42.997  -2.871  1.00  0.00           O
+ATOM    121  N   PRO B  35      -0.742  43.080  -4.787  1.00  0.00           N
+ATOM    122  CA  PRO B  35      -0.089  44.287  -5.283  1.00  0.00           C
+ATOM    123  C   PRO B  35      -0.578  45.497  -4.478  1.00  0.00           C
+ATOM    124  O   PRO B  35      -1.746  45.551  -4.094  1.00  0.00           O
+ATOM    125  CB  PRO B  35      -0.548  44.342  -6.741  1.00  0.00           C
+ATOM    126  CG  PRO B  35      -1.969  43.826  -6.640  1.00  0.00           C
+ATOM    127  CD  PRO B  35      -1.746  42.620  -5.741  1.00  0.00           C
+HETATM  128  N   HYP B  36       0.305  46.465  -4.204  1.00  0.00           N
+HETATM  129  CA  HYP B  36      -0.017  47.700  -3.496  1.00  0.00           C
+HETATM  130  C   HYP B  36      -1.202  48.452  -4.100  1.00  0.00           C
+HETATM  131  O   HYP B  36      -1.413  48.408  -5.312  1.00  0.00           O
+HETATM  132  CB  HYP B  36       1.261  48.529  -3.611  1.00  0.00           C
+HETATM  133  CG  HYP B  36       2.316  47.445  -3.543  1.00  0.00           C
+HETATM  134  CD  HYP B  36       1.723  46.444  -4.524  1.00  0.00           C
+HETATM  135  OD1 HYP B  36       3.719  47.684  -3.603  1.00  0.00           O
+HETATM  136  O1  NME B  37      -1.910  49.091  -3.310  1.00  0.00           O
+TER     137      NME B  37
+ATOM    138  N   PRO C  26      -4.748  19.755  -1.052  1.00  0.00           N
+ATOM    139  CA  PRO C  26      -5.305  21.015  -1.544  1.00  0.00           C
+ATOM    140  C   PRO C  26      -4.166  22.036  -1.639  1.00  0.00           C
+ATOM    141  O   PRO C  26      -3.099  21.822  -1.061  1.00  0.00           O
+ATOM    142  CB  PRO C  26      -6.315  21.383  -0.454  1.00  0.00           C
+ATOM    143  CG  PRO C  26      -5.607  20.908   0.798  1.00  0.00           C
+ATOM    144  CD  PRO C  26      -5.157  19.532   0.331  1.00  0.00           C
+HETATM  145  N   HYP C  27      -4.353  23.145  -2.364  1.00  0.00           N
+HETATM  146  CA  HYP C  27      -3.321  24.165  -2.507  1.00  0.00           C
+HETATM  147  C   HYP C  27      -3.144  24.929  -1.192  1.00  0.00           C
+HETATM  148  O   HYP C  27      -3.706  24.577  -0.154  1.00  0.00           O
+HETATM  149  CB  HYP C  27      -3.909  25.066  -3.602  1.00  0.00           C
+HETATM  150  CG  HYP C  27      -5.395  25.053  -3.285  1.00  0.00           C
+HETATM  151  CD  HYP C  27      -5.542  23.539  -3.116  1.00  0.00           C
+HETATM  152  OD1 HYP C  27      -5.695  25.648  -2.018  1.00  0.00           O
+ATOM    153  N   GLY C  28      -2.384  26.017  -1.261  1.00  0.00           N
+ATOM    154  CA  GLY C  28      -2.332  26.977  -0.183  1.00  0.00           C
+ATOM    155  C   GLY C  28      -3.565  27.885  -0.233  1.00  0.00           C
+ATOM    156  O   GLY C  28      -4.302  27.890  -1.228  1.00  0.00           O
+ATOM    157  N   PRO C  29      -3.802  28.660   0.832  1.00  0.00           N
+ATOM    158  CA  PRO C  29      -4.858  29.666   0.869  1.00  0.00           C
+ATOM    159  C   PRO C  29      -4.366  30.918   0.128  1.00  0.00           C
+ATOM    160  O   PRO C  29      -3.172  31.043  -0.158  1.00  0.00           O
+ATOM    161  CB  PRO C  29      -4.976  29.951   2.368  1.00  0.00           C
+ATOM    162  CG  PRO C  29      -3.521  29.929   2.792  1.00  0.00           C
+ATOM    163  CD  PRO C  29      -3.064  28.657   2.092  1.00  0.00           C
+HETATM  164  N   HYP C  30      -5.271  31.855  -0.178  1.00  0.00           N
+HETATM  165  CA  HYP C  30      -4.934  33.156  -0.744  1.00  0.00           C
+HETATM  166  C   HYP C  30      -3.867  33.891   0.066  1.00  0.00           C
+HETATM  167  O   HYP C  30      -3.805  33.762   1.290  1.00  0.00           O
+HETATM  168  CB  HYP C  30      -6.254  33.923  -0.702  1.00  0.00           C
+HETATM  169  CG  HYP C  30      -7.246  32.812  -0.965  1.00  0.00           C
+HETATM  170  CD  HYP C  30      -6.712  31.757  -0.006  1.00  0.00           C
+HETATM  171  OD1 HYP C  30      -8.657  32.999  -1.029  1.00  0.00           O
+ATOM    172  N   GLY C  31      -3.029  34.657  -0.625  1.00  0.00           N
+ATOM    173  CA  GLY C  31      -1.985  35.452  -0.009  1.00  0.00           C
+ATOM    174  C   GLY C  31      -2.545  36.670   0.732  1.00  0.00           C
+ATOM    175  O   GLY C  31      -3.720  37.016   0.584  1.00  0.00           O
+ATOM    176  N   PRO C  32      -1.714  37.346   1.536  1.00  0.00           N
+ATOM    177  CA  PRO C  32      -2.116  38.544   2.265  1.00  0.00           C
+ATOM    178  C   PRO C  32      -2.312  39.689   1.268  1.00  0.00           C
+ATOM    179  O   PRO C  32      -1.551  39.809   0.308  1.00  0.00           O
+ATOM    180  CB  PRO C  32      -0.932  38.783   3.205  1.00  0.00           C
+ATOM    181  CG  PRO C  32       0.241  38.354   2.346  1.00  0.00           C
+ATOM    182  CD  PRO C  32      -0.308  37.050   1.786  1.00  0.00           C
+HETATM  183  N   HYP C  33      -3.338  40.524   1.468  1.00  0.00           N
+HETATM  184  CA  HYP C  33      -3.639  41.681   0.631  1.00  0.00           C
+HETATM  185  C   HYP C  33      -2.452  42.621   0.433  1.00  0.00           C
+HETATM  186  O   HYP C  33      -1.539  42.668   1.259  1.00  0.00           O
+HETATM  187  CB  HYP C  33      -4.765  42.389   1.379  1.00  0.00           C
+HETATM  188  CG  HYP C  33      -5.514  41.209   1.957  1.00  0.00           C
+HETATM  189  CD  HYP C  33      -4.345  40.407   2.511  1.00  0.00           C
+HETATM  190  OD1 HYP C  33      -6.684  41.317   2.761  1.00  0.00           O
+ATOM    191  N   GLY C  34      -2.471  43.372  -0.667  1.00  0.00           N
+ATOM    192  CA  GLY C  34      -1.438  44.344  -0.970  1.00  0.00           C
+ATOM    193  C   GLY C  34      -1.425  45.485   0.049  1.00  0.00           C
+ATOM    194  O   GLY C  34      -2.448  45.785   0.668  1.00  0.00           O
+ATOM    195  N   PRO C  35      -0.275  46.141   0.237  1.00  0.00           N
+ATOM    196  CA  PRO C  35      -0.160  47.276   1.145  1.00  0.00           C
+ATOM    197  C   PRO C  35      -0.896  48.477   0.540  1.00  0.00           C
+ATOM    198  O   PRO C  35      -0.973  48.610  -0.683  1.00  0.00           O
+ATOM    199  CB  PRO C  35       1.352  47.494   1.223  1.00  0.00           C
+ATOM    200  CG  PRO C  35       1.783  47.171  -0.192  1.00  0.00           C
+ATOM    201  CD  PRO C  35       1.001  45.886  -0.421  1.00  0.00           C
+HETATM  202  N   HYP C  36      -1.459  49.347   1.388  1.00  0.00           N
+HETATM  203  CA  HYP C  36      -2.161  50.560   0.986  1.00  0.00           C
+HETATM  204  C   HYP C  36      -1.346  51.430   0.031  1.00  0.00           C
+HETATM  205  O   HYP C  36      -0.146  51.615   0.232  1.00  0.00           O
+HETATM  206  CB  HYP C  36      -2.429  51.282   2.305  1.00  0.00           C
+HETATM  207  CG  HYP C  36      -2.673  50.108   3.229  1.00  0.00           C
+HETATM  208  CD  HYP C  36      -1.501  49.221   2.836  1.00  0.00           C
+HETATM  209  OD1 HYP C  36      -2.983  50.217   4.616  1.00  0.00           O
+HETATM  210  O1  NME C  37      -1.957  51.912  -0.932  1.00  0.00           O
+CONECT   14   13   15   20
+CONECT   12    7   13   18
+CONECT   33   32   34   39
+CONECT   31   26   32   37
+CONECT   52   51   53   58
+CONECT   50   45   51   56
+CONECT   71   70   72   77
+CONECT   69   64   70   75
+CONECT   77   71
+CONECT   92   91   93   98
+CONECT   90   85   91   96
+CONECT  111  110  112  117
+CONECT  109  104  110  115
+CONECT  130  129  131  136
+CONECT  128  123  129  134
+CONECT  136  130
+CONECT  147  146  148  153
+CONECT  145  140  146  151
+CONECT  166  165  167  172
+CONECT  164  159  165  170
+CONECT  185  184  186  191
+CONECT  183  178  184  189
+CONECT  204  203  205  210
+CONECT  202  197  203  208
+CONECT  210  204
+END

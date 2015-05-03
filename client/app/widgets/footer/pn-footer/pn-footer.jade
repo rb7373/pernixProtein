@@ -1,14 +1,20 @@
-.container
-  .navbar.navbar-inverse.navbar-fixed-bottom
-    .container-fluid.text-center
-      .row
-        a.btn.navbar-btn.pull-left.pn-footer-button
+.container(tabindex="0")
+  #footer.navbar.navbar-inverse.navbar-fixed-bottom
+    div(layout="row")
+      div(flex="")
+        a.btn.navbar-btn.pn-footer-button(ng-show='!!navigation.getPrevious().title',
+        ng-click = 'navigation.goPrevious()')
           span.glyphicon.glyphicon-triangle-left(aria-hidden='true')
-          | &nbsp;123456789
-
-        a.btn.navbar-btn.pull-right.pn-footer-button
-          |  123456789&nbsp;
+          | &nbsp {{navigation.getPrevious().title}}
+      div(flex="", hide-sm="", layout = "row", layout-align="center center")
+        a.btn.navbar-btn.pn-footer-button.footerCenterTitle()
+          |  {{navigation.getCurrentTitle()}}
+      div(flex="", layout="row", layout-align="end center")
+        a.btn.navbar-btn.pn-footer-button(ng-show='!!navigation.getNext().title',
+        ng-click = 'navigation.goNext()')
+          | {{navigation.getNext().title}} &nbsp;
           span.glyphicon.glyphicon-triangle-right(aria-hidden='true')
-
-        a.btn.navbar-btn.pn-footer-button
-          |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{navigation.getCurrentStateName()}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    div(layout="row")
+      div(flex="", hide-gt-sm="", layout = "row", layout-align="center center")
+        a.btn.navbar-btn.pn-footer-button.footerCenterTitle()
+          |  {{navigation.getCurrentTitle()}}

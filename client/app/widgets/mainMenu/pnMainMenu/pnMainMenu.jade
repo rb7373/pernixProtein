@@ -1,49 +1,29 @@
-.container-fluid
-  .row
-    .col-xs-10.col-sm-6.col-md-4.col-lg-4
-      nav#menu_box
-      ul.menu(ng-mouseleave="hideOptions()")
-        li
-          a.topMenuOption(href="#", ng-mouseenter="showOptions()") {{navigation.getCurrentStateName()}}
-        li.subMenu(ng-show="showMenu", ng-repeat="section in [1, 2, 3, 4, 5]")
-          a(href="#") Menu 2
-          ul
-            li
-              a(href="#") Menu 2.1
-            li
-              a(href="#") Menu 2.2
-            li
-              a(href="#") Menu 2.3
-        li
-          a.topMenuOption(ng-show="showMenu") {{navigation.getCurrentStateName()}}
-//a#dropdownMenu1.btn.btn-default.pn-btn-main-menu(type='button', aria-expanded='true', ng-click="toggleMenu()", ng-show="!showMenu")
-//  span.glyphicon.glyphicon-plus(aria-hidden='true', ng-show="!showMenu")
-//  span.glyphicon.glyphicon-minus(aria-hidden='true', ng-show="showMenu")
-//    //| {{currentTitle}}
-//#MainMenu.row
-//  .list-group.panel.col-xs-10.col-sm-6.col-md-4.col-lg-4(ng-show="showMenu")
-//a.list-group-item.list-group-main(style="background-color: white; color: #222;", data-parent='#MainMenu', ng-show="showMenu", ng-click="toggleMenu()")
-//  span.glyphicon.glyphicon-plus(aria-hidden='true', ng-show="!showMenu")
-//  span.glyphicon.glyphicon-minus(aria-hidden='true', ng-show="showMenu")
-//  span.text-center &nbsp;&nbsp;&nbsp;&nbsp; {{navigation.getCurrentSectionName()}}
-//a.list-group-item(href='#demo1', data-toggle='collapse', data-parent='#MainMenu', ng-repeat='section in currentQuestion.choices') Item 1
-//#demo1.collapse
-//  a.list-group-item(href='') Subitem 1-1
-//  a.list-group-item(href='') Subitem 1-2
-//  a.list-group-item(href='') Subitem 1-3
-//a.list-group-item(href='#demo2', data-toggle='collapse', data-parent='#MainMenu') Item 2
-//#demo2.collapse
-//  a.list-group-item(href='') Subitem 2-1
-//  a.list-group-item(href='') Subitem 2-2
-//  a.list-group-item(href='') Subitem 2-3
-//a.list-group-item(href='#demo3', data-toggle='collapse', data-parent='#MainMenu') Item 3
-//#demo3.collapse
-//  a.list-group-item(href='') Subitem 3-1
-//  a.list-group-item(href='') Subitem 3-2
-//  a.list-group-item(href='') Subitem 3-3
-//a.list-group-item(href='#demo4', data-toggle='collapse', data-parent='#MainMenu') Item 4
-//#demo4.collapse
-//  a.list-group-item(href='') Subitem 4-1
-//  a.list-group-item(href='') Subitem 4-2
-//  a.list-group-item(href='') Subitem 4-3
+.container-fluid(style="position: fixed)")
+  ul#mainTopMenu.menu(ng-class="{'menuShadow':showMenu}",
+  ng-style="{'width': widthMenu }", ng-mouseleave = "closeOnLeaveMouse()")
+    li
+      a.topMenuOption.menuShadow(href="", ng-click="toogleOptionsMenu()")
+        span
+          ng-md-icon(icon="{{currentIcon}}", size="22", options = '{"duration": 375}')
+        span.titleMenu
+          | {{navigation.getCurrentStateTitle()}}
+    li.subMenu.fadeMenu(ng-show="showMenu", ng-repeat="section in sections",
+    ng-class="{'active' : isSelectedSubSection($index)}")
+      a(href="", ng-click="updateCurrentSubSection($index)")
+        span.subTitleMenu
+          | {{section.name}}
+      ul
+        li(ng-repeat="item in navigation.getSectionStructure()")
+          a(ui-sref="{{navigation.getSectionStructureStates()[$index]}}", ng-click = "selectOption($parent.$index, $index)")
+            span.subTitleItemMenu
+              | {{item}}
+    li
+      a.topMenuOption.fadeMenu(ng-show="showMenu", ng-click = "introduction()", ui-sref="main")
+        div
+          span.footerSubTitleMenu
+            | Voet, Voet & Pratt
+        div
+          span.footerTitleMenu
+            | Fundamentals of Biochemistry
 
+//, ng-mouseleave = "hideOptions()"
