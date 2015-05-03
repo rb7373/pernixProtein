@@ -17,6 +17,7 @@
             - type `choco install nodejs.install`
     - On OSX you can alleviate the need to run as sudo by [following these instructions](http://jpapa.me/nomoresudo). I highly recommend this step on OSX
 - Open terminal
+- Use the `sudo` command if necessary
 - Type `npm install -g node-inspector bower grunt-cli`
 
 ## Quick Start
@@ -32,7 +33,71 @@ grunt serve
 * `grunt serve` to launch a browser sync server on your source files
 * `grunt serve:dist` to launch a server on your optimized application
 
-### Path
+### Paths
+
+#### Javascripts or data files
+
+Place files such as:
+
+* controller.js
+* proteinStructure.js
+
+In
+
+```bash
+client/practices/
+```
+
+Then add to `client/index.html`
+
+```
+	<script src="practices/controller.js"></script>
+	<script src="practices/proteinStructure.js"></script>
+```
+
+Place files such as:
+
+* JSmol.min.nojq.js
+
+In
+
+```bash
+client/JSmol/
+```
+
+Then add to `client/index.html`
+
+```
+	<script src="JSmol/JSmol.min.nojq.js"></script>
+```
+
+Place files such as:
+
+* bigAntiparallelSheet.pdb
+
+In
+
+```bash
+client/components/data/PDB/bigAntiparallelSheet.pdb
+```
+
+#### Images
+
+Place the files as in the original application
+
+```bash
+client/components/images/
+or
+client/components/data/images/
+```
+
+#### Styles
+
+Add your styles to the file:
+
+```bash
+client/app/styles/practiveStyle.styl
+```
 
 ### Heroku deploy
 
