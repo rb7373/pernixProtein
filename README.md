@@ -90,13 +90,25 @@ client/components/images/
 or
 client/components/data/images/
 ```
+For example:
+```bash
+<!--
+client/components/styles/practiceStyle.styl
+-->
+background-image: url(../components/images/background.jpg);
+
+<!--
+client/practices/proteinStructure.js
+-->
+Jmol.script(jmolApplet0, 'background IMAGE "components/images/background.jpg";');
+```
 
 #### Styles
 
 Add your styles to the file:
 
 ```bash
-client/app/styles/practiveStyle.styl
+client/components/styles/practiceStyle.styl
 ```
 
 ### Heroku deploy
