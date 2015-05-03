@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [0.2.14 (2015-04-23)](#0214-2015-04-23)
+  - [Bug Fixes](#bug-fixes)
+  - [Features](#features)
+- [0.2.13 (2014-11-20)](#0213-2014-11-20)
+  - [Bug Fixes](#bug-fixes-1)
+  - [Features](#features-1)
+- [0.2.12 (2014-11-13)](#0212-2014-11-13)
+  - [Bug Fixes](#bug-fixes-2)
+  - [Features](#features-2)
+    - [Default and Typed params](#default-and-typed-params)
+- [0.2.11 (2014-08-26)](#0211-2014-08-26)
+  - [Bug Fixes](#bug-fixes-3)
+  - [Features](#features-3)
+- [0.2.10 (2014-03-12)](#0210-2014-03-12)
+  - [Bug Fixes](#bug-fixes-4)
+  - [Features](#features-4)
+- [0.2.9 (2014-01-17)](#029-2014-01-17)
+- [0.2.8 (2014-01-16)](#028-2014-01-16)
+  - [Bug Fixes](#bug-fixes-5)
+  - [Features](#features-5)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 <a name="0.2.14"></a>
 ### 0.2.14 (2015-04-23)
 

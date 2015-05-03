@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [[jQuery](http://jquery.com/) - New Wave JavaScript](#jqueryhttpjquerycom---new-wave-javascript)
+  - [Contribution Guides](#contribution-guides)
+  - [What you need to build your own jQuery](#what-you-need-to-build-your-own-jquery)
+  - [How to build your own jQuery](#how-to-build-your-own-jquery)
+    - [Modules](#modules)
+  - [Running the Unit Tests](#running-the-unit-tests)
+  - [Building to a different directory](#building-to-a-different-directory)
+  - [Updating Submodules](#updating-submodules)
+  - [Essential Git](#essential-git)
+    - [Submodules](#submodules)
+    - [cleaning](#cleaning)
+    - [rebasing](#rebasing)
+    - [handling merge conflicts](#handling-merge-conflicts)
+  - [[QUnit](http://docs.jquery.com/QUnit) Reference](#qunithttpdocsjquerycomqunit-reference)
+    - [Test methods](#test-methods)
+    - [Test assertions](#test-assertions)
+  - [Test Suite Convenience Methods Reference (See [test/data/testinit.js](https://github.com/jquery/jquery/blob/master/test/data/testinit.js))](#test-suite-convenience-methods-reference-see-testdatatestinitjshttpsgithubcomjqueryjqueryblobmastertestdatatestinitjs)
+    - [Returns an array of elements with the given IDs](#returns-an-array-of-elements-with-the-given-ids)
+    - [Asserts that a selection matches the given IDs](#asserts-that-a-selection-matches-the-given-ids)
+    - [Fires a native DOM event without going through jQuery](#fires-a-native-dom-event-without-going-through-jquery)
+    - [Add random number to url to stop caching](#add-random-number-to-url-to-stop-caching)
+    - [Load tests in an iframe](#load-tests-in-an-iframe)
+    - [Load tests in an iframe (window.iframeCallback)](#load-tests-in-an-iframe-windowiframecallback)
+  - [Questions?](#questions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 [jQuery](http://jquery.com/) - New Wave JavaScript
 ==================================================
 

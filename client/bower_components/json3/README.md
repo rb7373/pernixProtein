@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [JSON 3](#json-3)
+- [Changes from JSON 2](#changes-from-json-2)
+  - [Date Serialization](#date-serialization)
+- [Usage](#usage)
+  - [Web Browsers](#web-browsers)
+    - [`noConflict` and `runInContext`](#noconflict-and-runincontext)
+    - [Asynchronous Module Loaders](#asynchronous-module-loaders)
+  - [CommonJS Environments](#commonjs-environments)
+  - [JavaScript Engines](#javascript-engines)
+- [Compatibility](#compatibility)
+  - [Web Browsers](#web-browsers-1)
+  - [CommonJS Environments](#commonjs-environments-1)
+  - [JavaScript Engines](#javascript-engines-1)
+  - [Known Incompatibilities](#known-incompatibilities)
+  - [Required Native Methods](#required-native-methods)
+- [Contribute](#contribute)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # JSON 3 #
 
 ![JSON 3 Logo](http://bestiejs.github.io/json3/page/logo.png)

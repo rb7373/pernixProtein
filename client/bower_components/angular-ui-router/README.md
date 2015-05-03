@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [AngularUI Router &nbsp;[![Build Status](https://travis-ci.org/angular-ui/ui-router.svg?branch=master)](https://travis-ci.org/angular-ui/ui-router)](#angularui-router-&nbspbuild-statushttpstravis-ciorgangular-uiui-routersvgbranchmasterhttpstravis-ciorgangular-uiui-router)
+      - [The de-facto solution to flexible routing with nested views](#the-de-facto-solution-to-flexible-routing-with-nested-views)
+  - [#### The de-facto solution to flexible routing with nested views](#####-the-de-facto-solution-to-flexible-routing-with-nested-views)
+  - [](#)
+  - [Get Started](#get-started)
+    - [[Nested States & Views](http://plnkr.co/edit/u18KQc?p=preview)](#nested-states-&-viewshttpplnkrcoeditu18kqcppreview)
+- [State 1](#state-1)
+- [State 2](#state-2)
+    - [List of State 1 Items](#list-of-state-1-items)
+    - [List of State 2 Things](#list-of-state-2-things)
+    - [[Multiple & Named Views](http://plnkr.co/edit/SDOcGS?p=preview)](#multiple-&-named-viewshttpplnkrcoeditsdocgsppreview)
+  - [Resources](#resources)
+    - [Videos](#videos)
+  - [Reporting issues and Contributing](#reporting-issues-and-contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # AngularUI Router &nbsp;[![Build Status](https://travis-ci.org/angular-ui/ui-router.svg?branch=master)](https://travis-ci.org/angular-ui/ui-router)
 
 #### The de-facto solution to flexible routing with nested views

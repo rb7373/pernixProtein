@@ -1,6 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-[TOC]
+- [Tech](#tech)
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+  - [Use Grunt tasks](#use-grunt-tasks)
+  - [Paths](#paths)
+    - [Javascripts or data files](#javascripts-or-data-files)
+    - [Images](#images)
+    - [Styles](#styles)
+  - [Heroku deploy](#heroku-deploy)
 
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 ## Tech

@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [[Bootstrap](http://getbootstrap.com)](#bootstraphttpgetbootstrapcom)
+  - [Table of contents](#table-of-contents)
+  - [Quick start](#quick-start)
+    - [What's included](#whats-included)
+  - [Bugs and feature requests](#bugs-and-feature-requests)
+  - [Documentation](#documentation)
+    - [Running documentation locally](#running-documentation-locally)
+    - [Documentation for previous releases](#documentation-for-previous-releases)
+  - [Contributing](#contributing)
+  - [Community](#community)
+  - [Versioning](#versioning)
+  - [Creators](#creators)
+  - [Copyright and license](#copyright-and-license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # [Bootstrap](http://getbootstrap.com)
 ![Bower version](https://img.shields.io/bower/v/bootstrap.svg?style=flat)
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg?style=flat)](https://www.npmjs.com/package/bootstrap)

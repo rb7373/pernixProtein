@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [JSON3 Changelog](#json3-changelog)
+  - [3.1.0](#310)
+  - [3.0.0](#300)
+  - [0.8.5](#085)
+  - [0.8.0](#080)
+  - [0.5.0](#050)
+  - [0.2.0](#020)
+  - [0.1.0](#010)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # JSON3 Changelog
 
 ## 3.1.0

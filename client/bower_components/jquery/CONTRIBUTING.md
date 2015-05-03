@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Contributing to jQuery](#contributing-to-jquery)
+  - [Getting Involved](#getting-involved)
+  - [Discussion](#discussion)
+    - [Forum and IRC](#forum-and-irc)
+    - [Weekly Status Meetings](#weekly-status-meetings)
+  - [How to Report Bugs](#how-to-report-bugs)
+    - [Make sure it is a jQuery bug](#make-sure-it-is-a-jquery-bug)
+    - [Disable any browser extensions](#disable-any-browser-extensions)
+    - [Try the latest version of jQuery](#try-the-latest-version-of-jquery)
+    - [Try an older version of jQuery](#try-an-older-version-of-jquery)
+    - [Reduce, reduce, reduce!](#reduce-reduce-reduce)
+  - [jQuery Core Style Guide](#jquery-core-style-guide)
+  - [Tips For Bug Patching](#tips-for-bug-patching)
+    - [Environment: localhost w/ PHP, Node & Grunt](#environment-localhost-w-php-node-&-grunt)
+    - [Build a Local Copy of jQuery](#build-a-local-copy-of-jquery)
+    - [Fix a bug from a ticket filed at bugs.jquery.com:](#fix-a-bug-from-a-ticket-filed-at-bugsjquerycom)
+    - [Test Suite Tips...](#test-suite-tips)
+    - [jQuery supports the following browsers:](#jquery-supports-the-following-browsers)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Contributing to jQuery
 
 1. [Getting Involved](#getting-involved)
