@@ -23,7 +23,6 @@
 Clone this repo and run the content locally
 ```bash
 npm install
-bower install
 grunt serve
 ```
 
@@ -32,6 +31,8 @@ grunt serve
 * `grunt` or `grunt build` to build an optimized version of your application in `/dist`
 * `grunt serve` to launch a browser sync server on your source files
 * `grunt serve:dist` to launch a server on your optimized application
+
+### Path
 
 ### Heroku deploy
 
