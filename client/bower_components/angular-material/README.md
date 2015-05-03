@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Installing Angular Material](#installing-angular-material)
+  - [npm](#npm)
+  - [bower](#bower)
+  - [Using the Angular Material Library](#using-the-angular-material-library)
+  - [npm](#npm-1)
+  - [bower](#bower-1)
+    - [CDN](#cdn)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 This repo is for distribution on `npm` and `bower`. The source for this module is in the
 [main Angular Material repo](https://github.com/angular/material).
 Please file issues and pull requests against that repo.

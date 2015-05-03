@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [es5-shim <sup>[![Version Badge][2]][1]</sup>](#es5-shim-supversion-badge21sup)
+  - [Tests](#tests)
+  - [Shims](#shims)
+    - [Complete tests](#complete-tests)
+  - [Shams](#shams)
+    - [May fail](#may-fail)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 #es5-shim <sup>[![Version Badge][2]][1]</sup>
 
 [![npm badge][9]][1]

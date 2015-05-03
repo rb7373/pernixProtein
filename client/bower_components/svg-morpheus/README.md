@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [SVG Morpheus](#svg-morpheus)
+  - [Live demo](#live-demo)
+  - [Installing](#installing)
+    - [Download](#download)
+    - [Add Script](#add-script)
+  - [Usage](#usage)
+  - [Options](#options)
+    - [SVGMorpheus Constructor](#svgmorpheus-constructor)
+    - [SVGMorpheus.to()](#svgmorpheusto)
+  - [Supported Easings](#supported-easings)
+  - [Icon Set structure](#icon-set-structure)
+  - [Example code](#example-code)
+  - [Supported browsers](#supported-browsers)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # SVG Morpheus
 
 JavaScript library enabling SVG icons to morph from one to the other. It implements Material Design's [Delightful Details](http://www.google.com/design/spec/animation/delightful-details.html) transitions.
