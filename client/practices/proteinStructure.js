@@ -870,7 +870,7 @@ function SetUpStage() {
 function LoadImage() {
   $("#loading").hide();
   if (data.sections[currentSection].practiceSession[stage].image != "none") {
-    $("#practice_session").append('<img class="contentImage" src="data/images/' + data.sections[currentSection].practiceSession[stage].image + '.png">');
+    $("#practice_session").append('<img class="contentImage" src="components/data/images/' + data.sections[currentSection].practiceSession[stage].image + '.png">');
   }
 }
 

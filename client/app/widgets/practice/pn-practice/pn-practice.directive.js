@@ -31,7 +31,9 @@
       }else{
         console.log('CALL START ANIMATION DIRECTIVE');
         currentSection = scope.navigation.getCurrentSection(); // TODO uglify dont'n work
+        stage = 0;
         startPractice();
+        console.log('UPDATE stage');
       }
 
     }

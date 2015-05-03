@@ -1,3 +1,10 @@
+// startPractice() is the function call from the html.
+// Start() is no longer used
+
+var currentSection = 0;
+var stage = 0;
+var dragOpen = true;
+
 function startPractice() {
   restartStateVariables();
   hideComponents();
@@ -36,11 +43,6 @@ function Start() {
   ShowStageUI();
 
 }
-
-
-var currentSection = 0;
-var stage = 0;
-var dragOpen = true;
 
 // show the instructions at the beginning of a stage
 function ShowStageUI() {
@@ -124,22 +126,23 @@ function FinishedStage(right, showMessage) {
     }
     else {
       if (showMessage) {
-        showFeedbackAndHide(correct);
-        //ShowMessage(correct, "black");
+        showTopFeedbackAndHideUnnecessaryButtons(correct);
+        // call is you want a extra feedback
+        showBottomFeebackAndHideUnnecessaryButtons('Extra feed back');
       }
-      //$("#nextButton").show('fast');
     }
   }
   else if (showMessage) {
-    showFeedback(incorrect);
-    //ShowMessage(incorrect, "black");
+    showTopFeedbackAndHideUnnecessaryButtons(incorrect);
+    // call is you want a extra feedback
+    showBottomFeebackAndHideUnnecessaryButtons('Extra feed back');
   }
 }
 
 // end an activity
 function EndPracticeSession() {
   //ShowMessage(complete, "black");
-  showFeedback(complete);
+  showTopFeedback(complete);
   if (data.sections[currentSection].practiceSession[stage].inputField || data.sections[currentSection].practiceSession[stage].multipleChoice) {
     $('#multiple_choice').fadeOut();
   } else {
@@ -243,10 +246,11 @@ function AddInputField(question, answer, answerLabel) {
 
 // Pernix
 
+var slowAnimationTime = 2000;
+
 function restartStateVariables() {
-  var currentSection = 0;
-  var stage = 0;
-  var dragOpen = true;
+  stage = 0;
+  dragOpen = true;
 }
 
 function isThereAtLeastOneStageBefore() {
@@ -277,6 +281,8 @@ function showButtons() {
   showNextButton();
 }
 
+// PrevButton
+
 function showPrevButton() {
   $('#prev-button-pn').show();
   $('#center-button-pn').show();
@@ -284,55 +290,103 @@ function showPrevButton() {
   $('#prev-button-pn').addClass('animated zoomIn');
 }
 
-function showNextButton() {
-  $('#next-button-pn').show();
-  $('#next-button-pn').removeClass('animated zoomIn zoomOut');
-  $('#next-button-pn').addClass('animated zoomIn');
-}
-
-function showFeedback(feedback) {
-  console.log("show feedback");
-  $('#feedback-top-pn span').text(feedback);
-  $('#feedback-top-pn').show();
-  $('#feedback-top-pn').removeClass('animated shake fadeOut');
-  $('#feedback-top-pn').addClass('animated shake');
-  setTimeout(hideFeedback, 2000);
-}
-
-function showFeedbackAndHide(feedback) {
-  showFeedback(feedback);
-  if (stage != 0) {
-    setTimeout(showButtons, 2000);
-  } else {
-    setTimeout(showNextButton, 2000);
-  }
-}
-
-function hideFeedback() {
-  $('#feedback-top-pn').removeClass('animated shake fadeOut');
-  $('#feedback-top-pn').addClass('animated fadeOut');
-}
-
 function hidePrevButton() {
   $('#prev-button-pn').removeClass('animated zoomIn zoomOut');
   $('#prev-button-pn').addClass('animated zoomOut');
-  setTimeout(hidePrevButtonAux, 2000);
+  setTimeout(hidePrevButtonAux, slowAnimationTime);
 }
 
 function hidePrevButtonAux() {
   $('#prev-button-pn').hide();
 }
 
+// Next Button
+
+function showNextButton() {
+  $('#next-button-pn').show();
+  $('#next-button-pn').removeClass('animated zoomIn zoomOut');
+  $('#next-button-pn').addClass('animated zoomIn');
+}
+
 function hideNextButton() {
   $('#next-button-pn').removeClass('animated zoomIn zoomOut');
   $('#next-button-pn').addClass('animated zoomOut');
-  setTimeout(hideNextButtonAux, 2000);
+  setTimeout(hideNextButtonAux, slowAnimationTime);
 }
 
 function hideNextButtonAux() {
   $('#next-button-pn').hide();
 }
 
+// TopFeedback
+
+function showTopFeedbackAndHideUnnecessaryButtons(feedback) {
+  showTopFeedback(feedback);
+  if (stage != 0) {
+    setTimeout(showButtons, slowAnimationTime);
+  } else {
+    setTimeout(showNextButton, slowAnimationTime);
+  }
+}
+
+function showTopFeedback(feedback) {
+  console.log("show top feedback");
+  $('#feedback-top-pn span').text(feedback);
+  $('#feedback-top-pn').show();
+  $('#feedback-top-pn').removeClass('animated shake fadeOut');
+  $('#feedback-top-pn').addClass('animated shake');
+  setTimeout(hideTopFeedback, slowAnimationTime);
+}
+
+function hideTopFeedback() {
+  $('#feedback-top-pn').removeClass('animated shake fadeOut');
+  $('#feedback-top-pn').addClass('animated fadeOut');
+  setTimeout(hideTopFeebackAux, slowAnimationTime);
+}
+
+function hideTopFeebackAux(){
+  $('#feedback-top-pn').hide();
+}
+
+function setTopFeedback(feedback){
+  $('#feedback-top-pn span').text(feedback);
+}
+
+// BottomFeedback
+
+function showBottomFeebackAndHideUnnecessaryButtons(feedback) {
+  showBottomFeeback(feedback);
+  if (stage != 0) {
+    setTimeout(showButtons, slowAnimationTime);
+  } else {
+    setTimeout(showNextButton, slowAnimationTime);
+  }
+}
+
+function showBottomFeeback(feedback) {
+  console.log("show botton feedback");
+  $('#feedback-bottom-pn span').text(feedback);
+  $('#feedback-bottom-pn').show();
+  $('#feedback-bottom-pn').removeClass('animated fadeIn fadeOut');
+  $('#feedback-bottom-pn').addClass('animated fadeIn');
+  setTimeout(hideBottomFeeback, slowAnimationTime);
+}
+
+function hideBottomFeeback() {
+  $('#feedback-bottom-pn').removeClass('animated fadeIn fadeOut');
+  $('#feedback-bottom-pn').addClass('animated fadeOut');
+  setTimeout(hideBottomFeebackAux, slowAnimationTime);
+}
+
+function hideBottomFeebackAux(){
+  $('#feedback-bottom-pn').hide();
+}
+
+function setBottomFeeback(feedback){
+  $('#feedback-bottom-pn span').text(feedback);
+}
+
+// Others
 
 function hideComponents() {
   $('#popUps, #prev-button-pn, #center-button-pn, ' +
@@ -348,6 +402,7 @@ function showPopUp() {
 }
 
 function showNavigationButtons() {
+  console.log('---stage:-----: ', stage);
   if (isThereAtLeastOneStageBefore()) {
     showPrevButton();
   } else {

@@ -242,8 +242,12 @@
       // TODO: Take care of update jquery variables
       if (subSectionIndex === practiceState){
         currentSection = sectionIndex; // TODO uglify dont'n work
+        console.log('UPDATE stage');
+        stage = 0;
         console.log('CALL START ANIMATION NAVIGATION');
-        Start();
+        startPractice();
+
+
       }
     }
 
